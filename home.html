@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Fashion Shopping for Men, Women, Accessories - Bewakoof.com</title>
+    <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        /* Main header */
+        .mainheader{
+           
+            position: sticky;
+            top: 0;
+            
+            
+        }
+         /* upper header */
+        .upheader{
+            height: 23px;
+            background-color: rgb(222, 222, 222);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 2px 30px 2px 30px;
+            margin-top: -10px;
+        }
+        .ulist,.lefthead,.righthead{
+            
+            display: flex;
+            align-items: center;
+            
+            
+        }
+        .list{
+            list-style: none;
+            padding: 0 10px;
+            align-items: center;
+            
+           
+        }
+        #fontmob{
+            font-size: 20px;
+            align-items: center;
+        }
+        .listlogo{
+            margin-left: -5px;
+            list-style: none;
+        }
+        /* mid header */
+
+        .midheader{
+            height: 45px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            padding: 5px 80px 5px 80px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          
+        }
+        .productpage>img{
+            width: 150px;
+        }
+        #searchbar{
+            width: 270px;
+            background-color: rgb(222, 222, 222);
+            height: 35px;
+            border: none;
+            font-size: 12px;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .productpage{
+            text-decoration: none;
+            color: black;
+        }
+        .productpagett{
+            text-decoration: none;
+            color: black;
+
+        }
+        .productpagett:hover {
+           
+            text-decoration: underline;
+            
+            color: black;
+            
+        }
+        /* LOWER HEADER */
+
+        .lowheader{
+            
+            display: block;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 250px;
+            font-size: 18px;
+            height: 45px;
+            background-color: white;
+            
+        }
+
+        /* body */
+/* first row */
+        .firstrow{
+    display: flex;
+    gap: 20px;
+         }   
+        .productpagett>img{
+            width: 100%;
+
+        }  
+        .secondrow{
+            margin-top: 10px;
+            
+        }
+        .secondrow>a>img{
+            width: 100%;
+            
+        }
+
+        /* third row img
+         */
+
+         .thirdrow{
+            display: flex;
+            width: 80%;
+            margin: auto;
+            padding: 10px 20px;
+            text-align: center;
+            
+         }
+         .tirdrowbox{
+            text-decoration: none;
+            font-weight: bold;
+         }
+         
+         .tirdrowbox>img{
+            width: 80%;
+            
+         }
+         
+         .t3rd{
+
+            font-size: 13px;
+            text-decoration: none;
+            color: black;
+           
+            margin: auto;
+            margin-top: 20px;
+         }
+         
+         /* fourth row */
+         .fourthrow{
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+         }
+         .fourthrow>a>img{
+            width: 100%;
+         }
+
+         
+         /* fifth row */
+         .fifthrow{
+            text-align: center;
+            width: 100%;
+         }
+         .fifthrow>div{
+            display: flex;
+         }
+         .fifth>img{
+            width: 100%;
+         }
+         /* seven row grid view */
+         .sevenrow>h2{
+            text-align: center;
+         }
+         .sevenrow>h4{
+            text-align: center;
+            margin-bottom: 40px;
+            
+            
+         }
+         .sevenrow>h4>a{
+            color: teal;
+            
+            
+         }
+         .sevenrow>div{
+            width: 100%;
+            display: grid;
+           grid-template-columns: repeat(2 , 1fr);
+            gap: 20px;
+         }
+         .sevenrow>div>a>img{
+            width: 100%;
+            
+         }
+         /* eight same */
+         /* nine same seven */
+         .ninerow>h2{
+            text-align: center;
+         }
+         .ninerow>h4{
+            text-align: center;
+            margin-bottom: 40px;
+            
+            
+         }
+         .ninerow>h4>a{
+            color: teal;
+            
+            
+         }
+         .ninerow>div{
+            width: 100%;
+            display: grid;
+           grid-template-columns: repeat(3 , 1fr);
+            gap: 20px;
+         }
+         .ninerow>div>a>img{
+            width: 100%;
+            
+         }
+
+
+    </style>
+</head>
+<body>
+<div style="width: 100%;">
+    <header class="mainheader">
+        <header class="upheader">
+            <div class="lefthead">
+                <ul class="ulist">
+                    <li class="list">Offers</li>
+                    <li class="list">Fanbook</li>
+                    <li class="list"><i class="fa-solid fa-mobile-screen-button"></i></li>
+                    <li class="listlogo">Download App</li>
+                    <li class="list">TriBe Membership</li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <ul class="ulist">
+                    <li class="list">Contact Us</li>
+                    <li class="list">Track Order</li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="midheader">
+            <div class="lefthead">
+                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                
+                <ul class="ulist">
+                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="searchbar"  placeholder="  Search By Product,category or collection ">
+                
+            </div>
+                <ul class="ulist">
+                    <li class="listlogo">|</li>
+                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="lowheader">
+
+            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="">MEN</a>
+            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="">ACCESSORIES</a>
+            <a class="productpage" href="">WINTERWEAR</a>
+        </header>
+    </header>
+    <div class="firstrow">
+        <a class="productpagett" href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\frist row img1.webp" alt="frowimg1"></a>
+        <a class="productpagett" href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\first row img2.webp" alt="frowimg2"></a>
+        <a class="productpagett" href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\first rom img 3.jpg" alt="frowimg3"></a>
+    </div>
+    <div class="secondrow">
+        <a href="">
+        <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\second row.jpg" alt="secimg1">
+         </a>
+    </div>
+    <div class="thirdrow">
+        <div>
+            <a class="tirdrowbox" href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg1.webp" alt="3rdimg1">
+                <p class="t3rd">Bestsellers</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg2.webp" alt="3rdimg2">
+                <p class="t3rd">New Arrivals</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg3.webp" alt="3rdimg3">
+                <p class="t3rd">Hot Deals</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg4.jpg" alt="3rdimg4">
+                <p class="t3rd">Official Collaborations</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg5.webp" alt="3rdimg5">
+                <p class="t3rd">Last Sizes Left</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg6.webp" alt="3rdimg6">
+                <p class="t3rd">Plus Size</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg7.jpg" alt="3rdimg7">
+                <p class="t3rd">Customization</p>
+            </a>
+        </div>
+        <div>
+            <a class="tirdrowbox"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\3rdrowimg8.webp" alt="3rdimg8">
+                <p class="t3rd">Couppon Offers</p>
+            </a>
+        </div>
+
+    </div>
+    <div class="fourthrow">
+
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\row4.webp" alt="4throwimg1boys"></a>
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\row42.webp" alt="4throwimg2girls"></a>
+
+    </div>
+    <div class="fifthrow">
+        <h2>POPULAR CATEGORIES</h2>
+
+        <div>
+            <div>
+            <a class="fifth" href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif1.webp" alt="5rdimg1">
+                
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif2.webp" alt="5rdimg2">
+               
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif3.webp" alt="5rdimg3">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif4.webp" alt="5rdimg4">
+                
+            </a>
+             </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif5.webp" alt="5rdimg5">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\fif6.webp" alt="5rdimg6">
+               
+            </a>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="fifthrow">
+       
+
+        <div>
+            <div>
+            <a class="fifth" href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six1.jpg" alt="5rdimg1">
+                
+            </a>
+           </div>
+          <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six2.webp" alt="5rdimg2">
+               
+            </a>
+          </div>
+          <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six3.webp" alt="5rdimg3">
+                
+            </a>
+          </div>
+          <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six4.webp" alt="5rdimg4">
+                
+            </a>
+          </div>
+          <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six5.webp" alt="5rdimg5">
+                
+            </a>
+          </div>
+          <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\six6.jpg" alt="5rdimg6">
+               
+            </a>
+          </div>
+        </div>
+        
+    </div>
+
+
+   
+
+   
+    
+    <div class="sevenrow">
+        
+                <h4> <a href="">Explore all</a></h4>
+            <h2>THE GANG'S FAVOURITE</h2>
+        <div>
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\sev1.webp" alt="7throw1"></a>
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\sev2.webp" alt="7throw2"></a>
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\sev3.webp" alt="7throw3"></a>
+        <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\sev4.webp" alt="7throw4"></a>
+        </div>
+    </div>
+<!-- eight row of 6img -->
+    <div class="fifthrow">
+        <h2>CATEGORIES TO BAG</h2>
+
+        <div>
+            <div>
+            <a class="fifth" href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight1.jpg" alt="8rdimg1">
+                
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight2.jpg" alt="8rdimg2">
+               
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight3.jpg" alt="8rdimg3">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight4.jpg" alt="8rdimg4">
+                
+            </a>
+             </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight5.jpg" alt="8rdimg5">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\eight6.jpg" alt="8rdimg6">
+               
+            </a>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="ninerow">
+        
+       <h4> <a href="">Explore all</a></h4>
+    <div>
+    <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\nine1.webp" alt="9throw1"></a>
+    <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\nine2.gif" alt="9throw2"></a>
+    <a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\nine3.webp" alt="9throw3"></a>
+    
+    </div>
+</div>
+<!-- tenth row -->
+     <div class="secondrow">
+        <a href="">
+        <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ten.webp" alt="10throw single img">
+     </a>
+    </div>
+    <!-- elevent row of six images -->
+    <div class="fifthrow">
+        <h2>TOP ACCESSORIES</h2>
+
+        <div>
+            <div>
+            <a class="fifth" href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele1.jpg" alt="11rdimg1">
+                
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele2.jpg" alt="11rdimg2">
+               
+            </a>
+           </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele3.jpg" alt="11rdimg3">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele4.jpg" alt="11rdimg4">
+                
+            </a>
+             </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele6.jpg" alt="11rdimg5">
+                
+            </a>
+            </div>
+            <div>
+            <a class="fifth"  href="">
+                <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\ele7.jpg" alt="11rdimg6">
+               
+            </a>
+            </div>
+        
+        </div>
+    </div>
+    <!-- twelve row with 4 img 2 as repeat grid -->
+    <div class="sevenrow">
+        
+        
+    <h2>THE STOOPID COLLECTION</h2>
+<div>
+<a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\twel1.webp" alt="12throw1"></a>
+<a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\twel2.webp" alt="12throw2"></a>
+<a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\terl3.webp" alt="12throw3"></a>
+<a href=""><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\twel4.webp" alt="12throw4"></a>
+</div>
+</div>
+<!-- last thirteeth row of two horizontal img -->
+<div class="secondrow">
+    <a href="">
+    <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\thir1.webp" alt="13throw 1 img">
+ </a>
+ <a  href="">
+    <img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\thir2.jpg" alt="13throw 2 img">
+ </a>
+</div>
+
+<div class="blackbody">
+    
+</div>
+</div>
+    
+</body>
+</html>
