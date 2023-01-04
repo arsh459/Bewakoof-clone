@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+     #parent{
+        display: flex;
+     }
+     #first{
+        width: 50%;
+        height: 100vh;
+        background-color: bisque;
+        background: linear-gradient(white,bisque);
+
+     }
+     #second{
+        width: 50%;
+         align-items: center;
+        justify-content: center;
+     }
+     h1{
+        text-align: center;
+        font-size:2em;
+        margin: 20px;
+     }
+     h2{
+        text-align: center;
+        font-size: 2rem;
+     }
+     .up{
+        width: 60%;
+        margin: auto;
+        
+     }
+     
+     #blank{
+        
+        height: 100px;
+        background-color: bisque;
+     }
+     img{
+        width: 100%;
+        height: auto;
+     }
+    h3{
+        text-align: center;
+        font-size: 1.3em;
+    }
+    #in{
+      height: 60px; 
+      width: 90%;
+      margin: 20px ;
+   
+      text-align: center;
+      
+    }
+    #h3d{
+      margin: 10px 0 100px 0;
+    }
+    hr{
+      margin:50px 0 50px 0;
+    }
+    #out{
+      width: 50%;
+      height: 40px;
+      border: 2px solid rgb(53, 52, 52);
+      margin: auto;
+      border-radius: 6px;
+      
+    }
+    #facebook{
+      border: 1px solid rgb(20, 20, 20);
+      margin: 20px;
+      height: 30px;
+      width: 80%;
+      display: flex;
+    }
+    
+    #inline{
+     position: relative;
+     height: 1px;
+     width: 100%;
+     background-color: rgb(17, 17, 17);
+     margin: 30px 0;
+    }
+    #inline::before{
+      content: 'OR';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: #fff;
+      color: #232836;
+      padding: 0 15px;
+    }
+    #out{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border: 2px solid rgb(22, 22, 22);
+      margin-bottom: 20px;
+    }
+    #gri{
+      display: grid;
+      grid-template-columns:repeat(2,1fr);
+      
+      height: 40px;
+      width: 50%;
+      margin: 0 25% 0 25%;
+      gap: 20px;
+      align-content: center;
+      align-items: center;
+      
+    }
+    .face{
+      border: 1px solid rgb(28, 29, 28);
+      display: flex;
+      border-radius: 10px;
+      
+    }
+    #prag{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+     margin-top: 30px;
+    }
+    #p{
+    
+      text-align: center;
+      width: 60%;
+      font-size: small;
+    }
+    
+    
+   
+
+    </Style>
+</head>
+<body>
+    <div id="parent">
+       
+        <div id="first">
+            <div>
+                <h1>Welcome to the world of Bewakoof!</h1>
+            </div>
+            <div>
+            
+            <img src="https://images.bewakoof.com/web/group-19-1617704502.png" alt="">
+            <div id="blank">
+            </div>
+            </div>
+        </div>
+          
+         <div id="second">
+            <div>
+                <h1>Log in / Sign up</h1> 
+            </div>
+            <div id="h3d">
+               <h3>for Latest trends, exciting offers and everything Bewakoof!</h3>
+            </div>
+         
+           <div class="up">
+               <div id="in">
+                <input type="text" style="border-radius: 8px; height:100%;width: 100%; font-size: 100%; text-align: center; font-weight: 200;" placeholder="ENTER MOBILE NUMBER">
+               </div>
+               <div id="in">
+                <input type="button"  style="height: 100%;border-radius: 8px;  width: 100%; color: white;background-color: darkcyan;  " value="CONTINUE">
+               </div>
+               <div id="inline">
+                  
+               </div>
+           </div>
+           <div id="bot">
+               <div id="out">
+                  <div>
+                  <img style="width:60%; float:left; margin:7%  "  src="https://images.bewakoof.com/web/carbon-email-1620039620.png" alt="">
+                  </div>
+                  <div>
+                     <p>CONTINUE WITH GMAIL</p>
+                  </div>
+               </div>
+               <div id="gri">
+                 <div class="face">
+                  <div>
+                    <img  style="width: 45%; margin:45% 10% 10% 40% " src="https://images.bewakoof.com/web/group-3-2x-1558356035.png" alt="">
+                  </div>
+                  <div>
+                    <a href="https://accounts.google.com/"><p>GOOGLE</p></a>
+                    
+                  </div> 
+                 </div>
+                 <div class="face">
+                    <div>
+                      <img  style="width: 45%; margin:45% 10% 10% 40% " src="https://images.bewakoof.com/web/bi-facebook2x-1620886445.png" alt="">
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C550525804791%7Cb%7Cfacebook%20%27%7C&placement=&creative=550525804791&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D1007818%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA5NSdBhDfARIsALzs2EAoiEu8FJn25LQ0rHBm7Hwe1VgDYvlset1PvmgizqCqllXfP7VzltwaAs04EALw_wcB"> <p >FACEBOOK</p></a>
+                     
+                    </div> 
+                   </div>
+                </div>
+           </div>
+           <div id="prag">
+           <div id="p">
+            <p>By creating an account or logging in, you agree with Bewakoof's Terms and Conditions and Privacy Policy.</p>
+           </div>
+           </div>
+         </div>
+    </div>
+   
+   </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            display: grid; 
+            width: 100%;
+            height: 97vh;
+            grid-template-columns:50% 40% 10%;
+        
+            
+        }
+        
+        #first,#third{
+            background-color: bisque;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+        #first>div{
+          width: 48%;
+          height: 116%;
+        
+          margin-top: 12%;
+          margin-left: 20%;
+        }
+        img{
+            height: 95%;
+            width: 100%;
+        }
+        
+        form{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            margin-left: 22%;
+        }
+        #second>div{
+            display: flex;
+            height: 100%;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        
+            
+        
+        }
+        input{
+            display: block;
+            width: 75%;
+            height: 40px;
+            margin-top: 25px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        button{
+            width: 76%;
+            height: 55px;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 6px;
+            color: white;
+            background-color: darkgray;
+        }
+       #chek{
+        display: flex;
+        margin-top: 30px;
+       }
+       #c{
+        margin-top: -20px;
+        margin-left: 10px;
+        margin-right: 10px;
+       }
+        
+    </style>
+</head>
+<body>
+    <div id="parent">
+       <div id="first">
+        <div>
+         <img src="https://images.bewakoof.com/web/desktop-sign-up-banner--1623760676.png" alt="">
+        </div>
+       </div>
+       <div id="second">
+        <div>
+         <form action="">
+            <h1>Sign Up</h1>
+            <div><h3>Hi new buddy, let's get you started with the bewakoofi!</h3></div>
+            <input type="text" placeholder="Name">
+            <input type="number" placeholder="Mobile">
+            <input type="email" placeholder="Email-ID">
+            <input type="password" placeholder="Password">
+            <div id="chek">
+                 <div id="c">
+                    <input type="checkbox">
+                 </div>
+                 <div>
+                   <p>I want to receive order updates on Whatsapp</p>
+                 </div>
+            </div>
+            <button type="submit">PROCEED</button>
+           
+            
+         </form>
+    </div>
+       </div>
+       <div id="third"></div>
+    </div>
+</body>
+</html>
