@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Covers And Cases</title>
+    <h1>Apple Covers And Cases</h1>
+</head>
+<style>
+    #appleContainers  {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    #childDiv {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        text-align: center;
+    }
+
+    #childDiv :hover {
+        width: 40%;
+    }
+
+    #childDiv > img {
+        width: 50%;
+    }
+    #priceBox {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+    }
+     p + p {
+        text-decoration: line-through;
+     }
+
+</style>
+<body>
+    <div id="appleContainers">
+
+    </div>
+    
+</body>
+<script>
+
+var data = [
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/kgmla4w0/cases-covers/back-cover/t/p/g/apple-mhll3zm-a-original-imafwtnucj8nqnkf.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 Mini",
+    price : "Rs./- 2199",
+    strikedOffPrice : "2599",
+    id : 1},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/j/a/8/-original-imagdv6nhexzrvhm.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 2099",
+    strikedOffPrice : "2399",
+    id : 2},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/a/y/j/-original-imagch76vsdhzhan.jpeg?q=70",
+    title : "APPLE back cover for iphone 13 pro max",
+    price : "Rs./- 4199",
+    strikedOffPrice : "5599",
+    id : 3},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/1/5/-original-imagdv6ntrxdjqcq.jpeg?q=70",
+    title : "APPLE back cover for iphone 11 pro max",
+    price : "Rs./- 3199",
+    strikedOffPrice : "3599",
+    id : 4},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2nmnww0/cases-covers/b/w/e/-original-imagdy2hjkvnfa6m.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 2899",
+    strikedOffPrice : "3799",
+    id : 5},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/i/u/-original-imagdv6na8nhswgy.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 Mini",
+    price : "Rs./- 2099",
+    strikedOffPrice : "2599",
+    id : 6},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/8/w/4/-original-imagdv6nyzdj6sfv.jpeg?q=70",
+    title : "APPLE back cover for iphone 11 Mini",
+    price : "Rs./- 4199",
+    strikedOffPrice : "5099",
+    id : 7},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/9/4/s/-original-imagdv6nm4stnkxa.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 4499",
+    strikedOffPrice : "5199",
+    id : 8},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/4/o/n/-original-imagdv6nqnhvs2w3.jpeg?q=70",
+    title : "APPLE back cover for iphone 13 Mini",
+    price : "Rs./- 2599",
+    strikedOffPrice : "3099",
+    id : 9},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/m/0/8/-original-imagch77fy4rjeh9.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 pro max",
+    price : "Rs./- 3199",
+    strikedOffPrice : "4199",
+    id : 10}
+    ];
+
+   display(data);
+
+    function display(list) {
+        list.map(function(elem) {
+            var div = document.createElement("div");
+            div.setAttribute("id","childDiv");
+    
+            var image = document.createElement("img");
+            image.setAttribute("src", elem.img_url);
+            image.setAttribute("alt", elem.id);
+
+            title = document.createElement("h2");
+            title.textContent = elem.title;
+
+            var priceBox = document.createElement("div");
+            priceBox.setAttribute("id","priceBox");
+
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+             var mrp = document.createElement("p");
+             mrp.textContent = elem.strikedOffPrice;
+
+             priceBox.append(price,mrp);
+            div.append(image,title,priceBox);
+            document.querySelector("#appleContainers").append(div);
+        })
+        console.log(data);
+    }
+</script>
+
+
+</html>
