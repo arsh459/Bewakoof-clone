@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Page</title>
+    <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+                .mainheader{
+           
+           position: sticky;
+           top: 0;
+           
+           
+       }
+        /* upper header */
+       .upheader{
+           height: 23px;
+           background-color: rgb(222, 222, 222);
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 12px;
+           padding: 2px 30px 2px 30px;
+           margin-top: -10px;
+       }
+       .ulist,.lefthead,.righthead{
+           
+           display: flex;
+           align-items: center;
+           
+           
+       }
+       .list{
+           list-style: none;
+           padding: 0 10px;
+           align-items: center;
+           
+          
+       }
+       #fontmob{
+           font-size: 20px;
+           align-items: center;
+       }
+       .listlogo{
+           margin-left: -5px;
+           list-style: none;
+       }
+       /* mid header */
+
+       .midheader{
+           height: 45px;
+           background-color: white;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 15px;
+           padding: 5px 80px 5px 80px;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+         
+       }
+       .productpage>img{
+           width: 150px;
+       }
+       #searchbar{
+           width: 270px;
+           background-color: rgb(222, 222, 222);
+           height: 35px;
+           border: none;
+           font-size: 12px;
+           border-radius: 4px;
+           padding: 5px;
+       }
+       .productpage{
+           text-decoration: none;
+           color: black;
+       }
+       .productpagett{
+           text-decoration: none;
+           color: black;
+
+       }
+       .productpagett:hover {
+          
+           text-decoration: underline;
+           
+           color: black;
+           
+       }
+       /* LOWER HEADER */
+
+       .lowheader{
+           
+           display: block;
+           margin: auto;
+           display: flex;
+           justify-content: space-evenly;
+           padding: 10px 250px;
+           font-size: 18px;
+           height: 45px;
+           background-color: white;
+           
+       }
+        #parent{
+            display:flex;
+            justify-content: space-around;
+            width:85%;
+            margin:auto;
+        }
+        #filter{
+            width:20%;
+            position:-webkit-sticky;
+            top:0;
+        }
+        #image{
+            width:70%;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:2%;
+            padding-top: 50px;
+            
+        }
+        #image>div>img{
+            width:100%;
+        }
+        .Brand{
+            margin-top:2px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .Desc{
+            margin-top:-10px;
+            font-size: 14px;
+            color:grey;
+
+        }
+        .actual_price{
+            font-size:20px;
+            font-weight: bold;
+        }
+        .cprice{
+            font-size:15px;
+            color:grey;
+            text-decoration: line-through;
+        }
+        #image>div>p:nth-child(4){
+            margin-top:0px;
+        }
+        #image>div>p:nth-child(5){
+            font-weight: bold;
+            font-size: 14px;
+            color:black;
+            margin-top:-9px;
+            margin-left:8px;
+            font-family: arial;
+        }
+        #image>div>p:nth-child(5)>span{
+            font-size: 18px;
+        }
+        
+        #filter>select{
+            display:block;
+            font-size: 20px;
+            width:100%;
+            border:none;
+            border-bottom: 1px solid grey;
+            height:40px;
+        }
+        #filter>p{
+            margin-left: 5px;
+            color: grey;
+        }
+        #main_Tag{
+            width:80%;
+            margin:auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="mainheader">
+        <header class="upheader">
+            <div class="lefthead">
+                <ul class="ulist">
+                    <li class="list">Offers</li>
+                    <li class="list">Fanbook</li>
+                    <li class="list"><i class="fa-solid fa-mobile-screen-button"></i></li>
+                    <li class="listlogo">Download App</li>
+                    <li class="list">TriBe Membership</li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <ul class="ulist">
+                    <li class="list">Contact Us</li>
+                    <li class="list">Track Order</li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="midheader">
+            <div class="lefthead">
+                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                
+                <ul class="ulist">
+                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="searchbar"  placeholder="  Search By Product,category or collection ">
+                
+            </div>
+                <ul class="ulist">
+                    <li class="listlogo">|</li>
+                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="lowheader">
+
+            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="">MEN</a>
+            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="">ACCESSORIES</a>
+            <a class="productpage" href="">WINTERWEAR</a>
+        </header>
+    </header>
+    <h1 id="main_Tag">Men Clothing</h1>
+    <div id="parent">
+        <div id="filter">
+            <p>FILTERS</p>
+            <select id="size">
+                <option value="">Size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <!--<option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>-->
+            </select>
+            <select id="rating">
+                <option value="">Rating</option>
+                <option value="4">4 and above</option>
+                <option value="3">3 and above</option>
+                <option value="2">2 and above</option>
+                <option value="1">1 and above</option>
+            </select>
+            <p>SORT BY</p>
+            <select id="sbp">
+                <option value="">Sort By Price</option>
+                <option value="htl">High to Low</option>
+                <option value="lth">Low to High</option>
+            </select>
+        </div>
+        <div id="image">
+            <!--Appending here-->
+        </div>
+    </div>
+</body>
+</html>
+<script src="men.js">
+    
+</script>
