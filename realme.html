@@ -110,20 +110,7 @@
 
 
 
-
-   #btnAddToCart {
-       width: 50%;
-       background-color: floralwhite;
-       border-radius: 5px;
-       margin: auto;
-       margin-bottom: 20px;
-       cursor: pointer;
-   }
-   #btnAddToCart:hover {
-       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
-
-   #Containers  {
+      #Containers  {
        display: grid;
        grid-template-columns: repeat(4,1fr);
        gap: 20px;
@@ -135,19 +122,46 @@
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        text-align: center;
    }
+   #childDiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
-   
    #childDiv > img {
-       width: 50%;
+       width: 100%;
    }
+
+   #box_of_rating_and_price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+   }
+
+   #box_of_rating_and_price > :nth-child(2) {
+    width: 20%;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: coral;
+   }
+
+   #description {
+    font-size: x-small;
+    font-weight: lighter;
+   }
+
    #priceBox {
        display: flex;
        justify-content: space-between;
        width: 30%;
    }
+
+   p{
+    font-weight: bold;
+   }
+
     p + p {
        text-decoration: line-through;
        color: crimson;
+       font-weight: bold;
     }
 
 </style>
@@ -178,12 +192,12 @@
         </header>
         <header class="midheader">
             <div class="lefthead">
-                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                <a class="productpage" href="index.html"><img src="./images home/bewakoof-logo-large.png" alt="logo"></a>
                 
                 <ul class="ulist">
-                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
-                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
-                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                    <li class="list"><a class="productpagett" href="men.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="womens.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="covers.html">MOBILE COVERS</a></li>
                 </ul>
             </div>
             <div class="righthead">
@@ -194,21 +208,21 @@
             </div>
                 <ul class="ulist">
                     <li class="listlogo">|</li>
-                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    <li class="list"><a class="productpage" href="login.html">Login</a></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-regular fa-heart"></a></i></li>
                     
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-solid fa-bag-shopping"></a></i></li>
                     
                 </ul>
             </div>
         </header>
         <header class="lowheader">
 
-            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="covers.html">LIVE NOW!</a>
             <a class="productpage" href="men.html">MEN</a>
-            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="womens.html">WOMEN</a>
             <a class="productpage" href="covers.html">ACCESSORIES</a>
-            <a class="productpage" href="">WINTERWEAR</a>
+            <a class="productpage" href="men.html">WINTERWEAR</a>
         </header>
     </header> 
     <!-- Till here it is navbar section-->
@@ -222,64 +236,124 @@
 <script>
 
 var data = [
-    {img_url : "https://images.bewakoof.com/t640/setsuritsu-designer-hard-cover-for-realme-5-pro-564200-1671622326-1.jpg",
+    {
+    img_url : "https://images.bewakoof.com/t640/setsuritsu-designer-hard-cover-for-realme-5-pro-564200-1671622326-1.jpg",
     title : "RealMe 5 Pro",
     price : "Rs./- 299",
     strikedOffPrice : "499",
-    id : 1},
-    {img_url : "https://images.bewakoof.com/t640/mind-in-space-designer-hard-cover-for-realme-5-pro-565801-1672310356-1.jpg",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro 5G(Impact Resistant, Matte Finish)",
+    id : 1
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/mind-in-space-designer-hard-cover-for-realme-5-pro-565801-1672310356-1.jpg",
     title : "RealMe 5 Pro",
     price : "Rs./- 299",
     strikedOffPrice : "599",
-    id : 2},
-    {img_url : "https://images.bewakoof.com/t640/anti-hero-taylor-designer-hard-cover-for-realme-5-pro-564070-1671623116-1.jpg",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro (Impact Resistant, Matte Finish)",
+    id : 2
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/anti-hero-taylor-designer-hard-cover-for-realme-5-pro-564070-1671623116-1.jpg",
     title : "RealMe 5 Pro",
     price : "Rs./- 399",
     strikedOffPrice : "699",
-    id : 3},
-    {img_url : "https://images.bewakoof.com/t640/anime-eyes-premium-glass-case-for-realme-9-pro-5g-shock-proof-scratch-resistant-562638-1671096665-1.jpg",
+    rating: 4.4,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro (Impact Resistant, Matte Finish)",
+    id : 3
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/anime-eyes-premium-glass-case-for-realme-9-pro-5g-shock-proof-scratch-resistant-562638-1671096665-1.jpg",
     title : "RealMe 9 Pro 5G",
     price : "Rs./- 399",
     strikedOffPrice : "599",
-    id : 4},
-    {img_url : "https://images.bewakoof.com/t640/soul-of-anime-premium-glass-case-for-realme-9-pro-5g-shock-proof-scratch-resistant-562652-1671096623-1.jpg",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro 5G (Impact Resistant, Matte Finish)",
+    id : 4
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/soul-of-anime-premium-glass-case-for-realme-9-pro-5g-shock-proof-scratch-resistant-562652-1671096623-1.jpg",
     title : "RealMe 9 pro 5G",
     price : "Rs./- 399",
     strikedOffPrice : "599",
-    id : 5},
-    {img_url : "https://images.bewakoof.com/t640/king-of-curses-designer-hard-cover-for-realme-7-557362-1669949707-1.jpg",
+    rating: 4.5,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro 5G(Impact Resistant, Matte Finish)",
+    id : 5
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/king-of-curses-designer-hard-cover-for-realme-7-557362-1669949707-1.jpg",
     title : "RealMe 7",
     price : "Rs./- 299",
     strikedOffPrice : "499",
-    id : 6},
-    {img_url : "https://images.bewakoof.com/t640/batman-comic-designer-hard-cover-for-realme-7-565444-1672311444-1.jpg",
+    rating: 4.3,
+    desc:"Life Typography Premium Glass Cover For RealMe 7(Impact Resistant, Matte Finish)",
+    id : 6
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/batman-comic-designer-hard-cover-for-realme-7-565444-1672311444-1.jpg",
     title : "RealMe 7",
     price : "Rs./- 399",
     strikedOffPrice : "599",
+    rating: 4.6,
+    desc:"Life Typography Premium Glass Cover For RealMe 7(Impact Resistant, Matte Finish)",
     id : 7},
-    {img_url : "https://images.bewakoof.com/t640/levitating-minion-designer-hard-cover-for-realme-7-564336-1671620301-1.jpg",
+    {
+    img_url : "https://images.bewakoof.com/t640/levitating-minion-designer-hard-cover-for-realme-7-564336-1671620301-1.jpg",
     title : "RealMe 7",
     price : "Rs./- 299",
     strikedOffPrice : "499",
-    id : 8},
-    {img_url : "https://images.bewakoof.com/t640/golden-owl-printed-premium-glass-cover-for-realme-9-pro-plus-shock-proof-light-weight-553119-1667818181-1.jpg",
+    rating: 4.2,
+    desc:"Life Typography Premium Glass Cover For RealMe 7(Impact Resistant, Matte Finish)",
+    id : 8
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/golden-owl-printed-premium-glass-cover-for-realme-9-pro-plus-shock-proof-light-weight-553119-1667818181-1.jpg",
     title : "RealMe 9 Pro Plus",
     price : "Rs./- 199",
     strikedOffPrice : "399",
-    id : 9},
-    {img_url : "https://images.bewakoof.com/t640/tour-the-world-printed-premium-glass-cover-for-realme-9-pro-plus-shock-proof-light-weight-553123-1667818223-1.jpg",
+    rating: 3.7,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 Pro Plus(Impact Resistant, Matte Finish)",
+    id : 9
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/tour-the-world-printed-premium-glass-cover-for-realme-9-pro-plus-shock-proof-light-weight-553123-1667818223-1.jpg",
     title : "RealMe 9 Pro Plus",
     price : "Rs./- 299",
     strikedOffPrice : "499",
-    id : 10}
+    rating: 3.9,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 Pro Plus(Impact Resistant, Matte Finish)",
+    id : 10
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/levitating-minion-designer-hard-cover-for-realme-7-564336-1671620301-1.jpg",
+    title : "RealMe 7",
+    price : "Rs./- 299",
+    strikedOffPrice : "499",
+    rating: 4.2,
+    desc:"Life Typography Premium Glass Cover For RealMe 7(Impact Resistant, Matte Finish)",
+    id : 11
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/anti-hero-taylor-designer-hard-cover-for-realme-5-pro-564070-1671623116-1.jpg",
+    title : "RealMe 5 Pro",
+    price : "Rs./- 399",
+    strikedOffPrice : "699",
+    rating: 4.4,
+    desc:"Life Typography Premium Glass Cover For RealMe 9 pro (Impact Resistant, Matte Finish)",
+    id : 12
+    },
     ];
 
    display(data);
 
-    function display(list) {
+   function display(list) {
         list.map(function(elem) {
             var div = document.createElement("div");
             div.setAttribute("id","childDiv");
+            div.addEventListener("click",function() {
+                addToCart(elem);
+            });
     
             var image = document.createElement("img");
             image.setAttribute("src", elem.img_url);
@@ -288,25 +362,31 @@ var data = [
             title = document.createElement("h2");
             title.textContent = elem.title;
 
+            var desc = document.createElement("p");
+            desc.textContent = elem.desc;
+            desc.setAttribute("id","description")
+
             var priceBox = document.createElement("div");
             priceBox.setAttribute("id","priceBox");
 
             var price = document.createElement("p");
             price.textContent = elem.price;
+
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-            var btn = document.createElement("button");
-            btn.textContent = "ADD TO CART";
-            btn.setAttribute("id","btnAddToCart");
-            btn.addEventListener("click",function() {
-                addToCart(elem);
-            });
+            var box = document.createElement("div");
+            box.setAttribute("id","box_of_rating_and_price");
+
+            var rating = document.createElement("div");
+            rating.textContent =  "* " + elem.rating;
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox,btn);
+            box.append(priceBox,rating)
+            div.append(image,title,desc,box);
             document.querySelector("#Containers").append(div);
         })
+        document.querySelector("h1").append("(" + data.length  +")");
         // console.log(data);
     }
     var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
