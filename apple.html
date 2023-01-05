@@ -113,35 +113,59 @@
 
     
 
-    #Containers  {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 20px;
-    }
-    #childDiv {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        text-align: center;
-    }
-    #childDiv:hover {
+       #Containers  {
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       gap: 20px;
+   }
+   #childDiv {
+       width: 100%;
+       height: 100%;
+       border-radius: 20px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       text-align: center;
+   }
+   #childDiv:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    
-    #childDiv > img {
-        width: 50%;
+   #childDiv > img {
+       width: 100%;
+   }
+
+   #box_of_rating_and_price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+   }
+
+   #box_of_rating_and_price > :nth-child(2) {
+    width: 20%;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: coral;
+   }
+
+   #description {
+    font-size: x-small;
+    font-weight: lighter;
+   }
+
+   #priceBox {
+       display: flex;
+       justify-content: space-between;
+       width: 35%;
+   }
+
+   p{
+    font-weight: bold;
+   }
+
+    p + p {
+       text-decoration: line-through;
+       color: crimson;
+       font-weight: bold;
     }
-    #priceBox {
-        display: flex;
-        justify-content: space-between;
-        width: 30%;
-    }
-     p + p {
-        text-decoration: line-through;
-        color: crimson;
-     }
 
 </style>
 <body>
@@ -167,12 +191,12 @@
         </header>
         <header class="midheader">
             <div class="lefthead">
-                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                <a class="productpage" href="index.html"><img src="./images home/bewakoof-logo-large.png" alt="logo"></a>
                 
                 <ul class="ulist">
-                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
-                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
-                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                    <li class="list"><a class="productpagett" href="men.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="womens.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="covers.html">MOBILE COVERS</a></li>
                 </ul>
             </div>
             <div class="righthead">
@@ -183,23 +207,23 @@
             </div>
                 <ul class="ulist">
                     <li class="listlogo">|</li>
-                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    <li class="list"><a class="productpage" href="login.html">Login</a></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-regular fa-heart"></a></i></li>
                     
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-solid fa-bag-shopping"></a></i></li>
                     
                 </ul>
             </div>
         </header>
         <header class="lowheader">
 
-            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="covers.html">LIVE NOW!</a>
             <a class="productpage" href="men.html">MEN</a>
-            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="womens.html">WOMEN</a>
             <a class="productpage" href="covers.html">ACCESSORIES</a>
-            <a class="productpage" href="">WINTERWEAR</a>
+            <a class="productpage" href="men.html">WINTERWEAR</a>
         </header>
-    </header> 
+    </header>
     <!-- Till here it is navbar section-->
 
     <h1>Apple Covers And Cases</h1>
@@ -211,56 +235,93 @@
 <script>
 
 var data = [
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/kgmla4w0/cases-covers/back-cover/t/p/g/apple-mhll3zm-a-original-imafwtnucj8nqnkf.jpeg?q=70",
+    {img_url : "https://images.bewakoof.com/t640/chrome-mickey-premium-glass-cover-for-apple-iphone-14-plus-553019-1667982586-1.jpg",
     title : "APPLE back cover for iphone 12 Mini",
     price : "Rs./- 2199",
     strikedOffPrice : "2599",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 Mini (Impact Resistant, Matte Finish)",
     id : 1},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/j/a/8/-original-imagdv6nhexzrvhm.jpeg?q=70",
+    {
+    img_url : "https://images.bewakoof.com/t640/hod-dragon-premium-glass-cover-for-apple-iphone-14-plus-552989-1667982811-1.jpg",
     title : "APPLE back cover for iphone 14 pro max",
     price : "Rs./- 2099",
     strikedOffPrice : "2399",
-    id : 2},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/a/y/j/-original-imagch76vsdhzhan.jpeg?q=70",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max (Impact Resistant, Matte Finish)",
+    id : 2
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/virgo-zodiac-premium-glass-cover-for-apple-iphone-14-plus-552963-1667982510-1.jpg",
     title : "APPLE back cover for iphone 13 pro max",
     price : "Rs./- 4199",
     strikedOffPrice : "5599",
-    id : 3},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/1/5/-original-imagdv6ntrxdjqcq.jpeg?q=70",
+    rating: 4.4,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 13 pro max (Impact Resistant, Matte Finish)",
+    id : 3
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/minion-peace-premium-glass-cover-for-apple-iphone-14-plus-552965-1667982372-1.jpg",
     title : "APPLE back cover for iphone 11 pro max",
     price : "Rs./- 3199",
     strikedOffPrice : "3599",
-    id : 4},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2nmnww0/cases-covers/b/w/e/-original-imagdy2hjkvnfa6m.jpeg?q=70",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 11 pro max (Impact Resistant, Matte Finish)",
+    id : 4
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/knight-batman-premium-glass-cover-for-apple-iphone-14-plus-552983-1667982217-1.jpg",
     title : "APPLE back cover for iphone 14 pro max",
     price : "Rs./- 2899",
     strikedOffPrice : "3799",
-    id : 5},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/i/u/-original-imagdv6na8nhswgy.jpeg?q=70",
+    rating: 4.5,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max(Impact Resistant, Matte Finish)",
+    id : 5
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/akatsuki-ninjas-premium-glass-cover-for-apple-iphone-14-plus-553002-1667982116-1.jpg",
     title : "APPLE back cover for iphone 12 Mini",
     price : "Rs./- 2099",
     strikedOffPrice : "2599",
-    id : 6},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/8/w/4/-original-imagdv6nyzdj6sfv.jpeg?q=70",
+    rating: 4.3,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 Mini(Impact Resistant, Matte Finish)",
+    id : 6
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/joker-dance-premium-glass-cover-for-apple-iphone-14-plus-552990-1667982319-1.jpg",
     title : "APPLE back cover for iphone 11 Mini",
     price : "Rs./- 4199",
     strikedOffPrice : "5099",
+    rating: 4.6,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 11 Mini(Impact Resistant, Matte Finish)",
     id : 7},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/9/4/s/-original-imagdv6nm4stnkxa.jpeg?q=70",
+    {
+    img_url : "https://images.bewakoof.com/t640/team-kakashi-premium-glass-cover-for-apple-iphone-14-plus-553001-1667981998-1.jpg",
     title : "APPLE back cover for iphone 14 pro max",
     price : "Rs./- 4499",
     strikedOffPrice : "5199",
-    id : 8},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/4/o/n/-original-imagdv6nqnhvs2w3.jpeg?q=70",
+    rating: 4.2,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max(Impact Resistant, Matte Finish)",
+    id : 8
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/itachi-manga-premium-glass-cover-for-apple-iphone-14-plus-552987-1667982377-1.jpg",
     title : "APPLE back cover for iphone 13 Mini",
     price : "Rs./- 2599",
     strikedOffPrice : "3099",
-    id : 9},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/m/0/8/-original-imagch77fy4rjeh9.jpeg?q=70",
+    rating: 3.7,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 13 Mini(Impact Resistant, Matte Finish)",
+    id : 9
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/lost-in-music-green-premium-glass-cover-for-apple-iphone-14-plus-552961-1667982645-1.jpg",
     title : "APPLE back cover for iphone 12 pro max",
     price : "Rs./- 3199",
     strikedOffPrice : "4199",
-    id : 10}
+    rating: 3.9,
+    desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 pro max(Impact Resistant, Matte Finish)",
+    id : 10
+    }
     ];
 
    display(data);
@@ -280,21 +341,31 @@ var data = [
             title = document.createElement("h2");
             title.textContent = elem.title;
 
+            var desc = document.createElement("p");
+            desc.textContent = elem.desc;
+            desc.setAttribute("id","description")
+
             var priceBox = document.createElement("div");
             priceBox.setAttribute("id","priceBox");
 
             var price = document.createElement("p");
             price.textContent = elem.price;
+
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-    
-           
+            var box = document.createElement("div");
+            box.setAttribute("id","box_of_rating_and_price");
+
+            var rating = document.createElement("div");
+            rating.textContent =  "* " + elem.rating;
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox);
+            box.append(priceBox,rating)
+            div.append(image,title,desc,box);
             document.querySelector("#Containers").append(div);
         })
+        document.querySelector("h1").append("(" + data.length  +")");
         // console.log(data);
     }
     var cartItems = JSON.parse(localStorage.getItem("cart")) || [];

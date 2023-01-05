@@ -110,7 +110,7 @@
 
 
 
-   #Containers  {
+      #Containers  {
        display: grid;
        grid-template-columns: repeat(4,1fr);
        gap: 20px;
@@ -126,18 +126,42 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-   
    #childDiv > img {
-       width: 50%;
+       width: 100%;
    }
+
+   #box_of_rating_and_price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+   }
+
+   #box_of_rating_and_price > :nth-child(2) {
+    width: 20%;
+    margin-top: 15px;
+    margin-left: 30px;
+    color: coral;
+   }
+
+   #description {
+    font-size: x-small;
+    font-weight: lighter;
+   }
+
    #priceBox {
        display: flex;
        justify-content: space-between;
        width: 30%;
    }
+
+   p{
+    font-weight: bold;
+   }
+
     p + p {
        text-decoration: line-through;
        color: crimson;
+       font-weight: bold;
     }
 
 </style>
@@ -168,12 +192,12 @@
         </header>
         <header class="midheader">
             <div class="lefthead">
-                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                <a class="productpage" href="index.html"><img src="./images home/bewakoof-logo-large.png" alt="logo"></a>
                 
                 <ul class="ulist">
-                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
-                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
-                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                    <li class="list"><a class="productpagett" href="men.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="womens.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="covers.html">MOBILE COVERS</a></li>
                 </ul>
             </div>
             <div class="righthead">
@@ -184,21 +208,21 @@
             </div>
                 <ul class="ulist">
                     <li class="listlogo">|</li>
-                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    <li class="list"><a class="productpage" href="login.html">Login</a></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-regular fa-heart"></a></i></li>
                     
-                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    <li class="list"><a class="productpage" href=""><i class="fa-solid fa-bag-shopping"></a></i></li>
                     
                 </ul>
             </div>
         </header>
         <header class="lowheader">
 
-            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="covers.html">LIVE NOW!</a>
             <a class="productpage" href="men.html">MEN</a>
-            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="womens.html">WOMEN</a>
             <a class="productpage" href="covers.html">ACCESSORIES</a>
-            <a class="productpage" href="">WINTERWEAR</a>
+            <a class="productpage" href="men.html">WINTERWEAR</a>
         </header>
     </header> 
     <!-- Till here it is navbar section-->
@@ -212,56 +236,113 @@
 <script>
 
 var data = [
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/kgmla4w0/cases-covers/back-cover/t/p/g/apple-mhll3zm-a-original-imafwtnucj8nqnkf.jpeg?q=70",
-    title : "APPLE back cover for iphone 12 Mini",
-    price : "Rs./- 2199",
-    strikedOffPrice : "2599",
-    id : 1},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/j/a/8/-original-imagdv6nhexzrvhm.jpeg?q=70",
-    title : "APPLE back cover for iphone 14 pro max",
-    price : "Rs./- 2099",
-    strikedOffPrice : "2399",
-    id : 2},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/a/y/j/-original-imagch76vsdhzhan.jpeg?q=70",
-    title : "APPLE back cover for iphone 13 pro max",
-    price : "Rs./- 4199",
-    strikedOffPrice : "5599",
-    id : 3},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/1/5/-original-imagdv6ntrxdjqcq.jpeg?q=70",
-    title : "APPLE back cover for iphone 11 pro max",
-    price : "Rs./- 3199",
-    strikedOffPrice : "3599",
-    id : 4},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2nmnww0/cases-covers/b/w/e/-original-imagdy2hjkvnfa6m.jpeg?q=70",
-    title : "APPLE back cover for iphone 14 pro max",
-    price : "Rs./- 2899",
-    strikedOffPrice : "3799",
-    id : 5},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/i/u/-original-imagdv6na8nhswgy.jpeg?q=70",
-    title : "APPLE back cover for iphone 12 Mini",
-    price : "Rs./- 2099",
-    strikedOffPrice : "2599",
-    id : 6},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/8/w/4/-original-imagdv6nyzdj6sfv.jpeg?q=70",
-    title : "APPLE back cover for iphone 11 Mini",
-    price : "Rs./- 4199",
-    strikedOffPrice : "5099",
+    {
+    img_url : "https://images.bewakoof.com/t640/floral-printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530297-1659436229-1.jpg",
+    title : "Mi 12 Pro 5G",
+    price : "Rs./- 499",
+    strikedOffPrice : "599",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For Mi 12 Pro 5G(Impact Resistant, Matte Finish)",
+    id : 1
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/palm-green-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530289-1659437279-1.jpg",
+    title : "Mi 12 Pro 5G",
+    price : "Rs./- 299",
+    strikedOffPrice : "399",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For Mi 12 Pro 5G (Impact Resistant, Matte Finish)",
+    id : 2
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/retro-gorgeous-flower-printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530316-1659448110-1.jpg",
+    title : "Redmi Note 5 Pro",
+    price : "Rs./- 299",
+    strikedOffPrice : "599",
+    rating: 4.4,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 5 Pro (Impact Resistant, Matte Finish)",
+    id : 3
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530324-1659439358-1.jpg",
+    title : "Redmi Note 5 Pro",
+    price : "Rs./- 399",
+    strikedOffPrice : "599",
+    rating: 4.7,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 5 Pro (Impact Resistant, Matte Finish)",
+    id : 4
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/gambling-problem-printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530326-1659447646-1.jpg",
+    title : "Redmi Note 7",
+    price : "Rs./- 299",
+    strikedOffPrice : "399",
+    rating: 4.5,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 7(Impact Resistant, Matte Finish)",
+    id : 5
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/abstract-faces-printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530303-1659439442-1.jpg",
+    title : "Redmi Note 9 Pro",
+    price : "Rs./- 299",
+    strikedOffPrice : "599",
+    rating: 4.3,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 9 Pro(Impact Resistant, Matte Finish)",
+    id : 6
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/struggling-panda-typography-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530302-1659437972-1.jpg",
+    title : "Redmi Note 8 Pro",
+    price : "Rs./- 499",
+    strikedOffPrice : "699",
+    rating: 4.6,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 8 Pro(Impact Resistant, Matte Finish)",
     id : 7},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/9/4/s/-original-imagdv6nm4stnkxa.jpeg?q=70",
-    title : "APPLE back cover for iphone 14 pro max",
-    price : "Rs./- 4499",
-    strikedOffPrice : "5199",
-    id : 8},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/4/o/n/-original-imagdv6nqnhvs2w3.jpeg?q=70",
-    title : "APPLE back cover for iphone 13 Mini",
-    price : "Rs./- 2599",
-    strikedOffPrice : "3099",
-    id : 9},
-    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/m/0/8/-original-imagch77fy4rjeh9.jpeg?q=70",
-    title : "APPLE back cover for iphone 12 pro max",
-    price : "Rs./- 3199",
-    strikedOffPrice : "4199",
-    id : 10}
+    {
+    img_url : "https://images.bewakoof.com/t320/brave-lion-printed-premium-glass-cover-for-mi-12-pro-5g-508227-1654836462-1.jpg",
+    title : "Redmi A2",
+    price : "Rs./- 499",
+    strikedOffPrice : "599",
+    rating: 4.2,
+    desc:"Life Typography Premium Glass Cover For Redmi A2(Impact Resistant, Matte Finish)",
+    id : 8
+    },
+    {
+    img_url : "https://images.bewakoof.com/t320/space-doodles-printed-premium-glass-cover-for-redmi-10a-shockproof-light-weight-507566-1654614859-1.jpg",
+    title : "Redmi 10A",
+    price : "Rs./- 599",
+    strikedOffPrice : "799",
+    rating: 3.7,
+    desc:"Life Typography Premium Glass Cover For Redmi 10A(Impact Resistant, Matte Finish)",
+    id : 9
+    },
+    {
+    img_url : "https://images.bewakoof.com/t640/planet-play-printed-premium-glass-cover-for-redmi-10a-impact-resistant-matte-finish-530270-1659441526-1.jpg",
+    title : "Redmi Note 6 Pro",
+    price : "Rs./- 399",
+    strikedOffPrice : "499",
+    rating: 3.9,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 6 Pro(Impact Resistant, Matte Finish)",
+    id : 10
+    },
+    {
+        img_url : "https://images.bewakoof.com/t640/retro-gorgeous-flower-printed-premium-glass-cover-for-mi-12-pro-5g-impact-resistant-matte-finish-530316-1659448110-1.jpg",
+    title : "Redmi Note 5 Pro",
+    price : "Rs./- 299",
+    strikedOffPrice : "599",
+    rating: 4.2,
+    desc:"Life Typography Premium Glass Cover For Redmi Note 5 Pro(Impact Resistant, Matte Finish)",
+    id : 11
+    },
+    {
+    img_url : "https://images.bewakoof.com/t320/brave-lion-printed-premium-glass-cover-for-mi-12-pro-5g-508227-1654836462-1.jpg",
+    title : "Redmi A2",
+    price : "Rs./- 499",
+    strikedOffPrice : "599",
+    rating: 4.4,
+    desc:"Life Typography Premium Glass Cover For Redmi A2 (Impact Resistant, Matte Finish)",
+    id : 12
+    },
     ];
 
    display(data);
@@ -281,21 +362,31 @@ var data = [
             title = document.createElement("h2");
             title.textContent = elem.title;
 
+            var desc = document.createElement("p");
+            desc.textContent = elem.desc;
+            desc.setAttribute("id","description")
+
             var priceBox = document.createElement("div");
             priceBox.setAttribute("id","priceBox");
 
             var price = document.createElement("p");
             price.textContent = elem.price;
+
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-    
-           
+            var box = document.createElement("div");
+            box.setAttribute("id","box_of_rating_and_price");
+
+            var rating = document.createElement("div");
+            rating.textContent =  "* " + elem.rating;
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox);
+            box.append(priceBox,rating)
+            div.append(image,title,desc,box);
             document.querySelector("#Containers").append(div);
-        })
+        }) 
+        document.querySelector("h1").append("(" + data.length  +")");
         // console.log(data);
     }
     var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
