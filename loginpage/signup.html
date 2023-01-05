@@ -129,7 +129,7 @@
     var num1=localStorage.getItem("number1");
     document.getElementById("mob").textContent=num1;
     
-    var dataArray=[];
+    var dataArray=JSON.parse(localStorage.getItem("store"))||[];
     function storedata(){
         event.preventDefault();
      var objArray={
@@ -144,5 +144,9 @@
      var st=JSON.parse(localStorage.getItem("store"));
      console.log(st);
      window.location.href="men.html";
+     document.getElementById("name").value="";
+     document.getElementById("email").value="";
+     document.getElementById("pass").value="";
+     document.getElementById("mobile").value="";
     }
 </script>
