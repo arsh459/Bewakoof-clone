@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>VIVO Covers And Cases</title>
+    <title>Samsung Covers And Cases</title>
 </head>
-
 <style>
     body {
        font-family: 'Montserrat', sans-serif;
@@ -111,19 +110,6 @@
 
 
 
-
-   #btnAddToCart {
-       width: 50%;
-       background-color: floralwhite;
-       border-radius: 5px;
-       margin: auto;
-       margin-bottom: 20px;
-       cursor: pointer;
-   }
-   #btnAddToCart:hover {
-       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
-
    #Containers  {
        display: grid;
        grid-template-columns: repeat(4,1fr);
@@ -136,6 +122,9 @@
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        text-align: center;
    }
+   #childDiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
    
    #childDiv > img {
@@ -152,6 +141,8 @@
     }
 
 </style>
+
+
 
 
 <body>
@@ -212,7 +203,7 @@
     </header> 
     <!-- Till here it is navbar section-->
 
-    <h1>VIVO Covers And Cases</h1>
+    <h1>Samsung Covers And Cases</h1>
     <div id="Containers">
 
     </div>
@@ -275,10 +266,13 @@ var data = [
 
    display(data);
 
-    function display(list) {
+   function display(list) {
         list.map(function(elem) {
             var div = document.createElement("div");
             div.setAttribute("id","childDiv");
+            div.addEventListener("click",function() {
+                addToCart(elem);
+            });
     
             var image = document.createElement("img");
             image.setAttribute("src", elem.img_url);
@@ -295,15 +289,11 @@ var data = [
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-            var btn = document.createElement("button");
-            btn.textContent = "ADD TO CART";
-            btn.setAttribute("id","btnAddToCart");
-            btn.addEventListener("click",function() {
-                addToCart(elem);
-            });
+    
+           
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox,btn);
+            div.append(image,title,priceBox);
             document.querySelector("#Containers").append(div);
         })
         // console.log(data);

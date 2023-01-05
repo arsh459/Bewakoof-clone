@@ -6,155 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <title>Xiaomi Covers And Cases</title>
+    <title>Apple Covers And Cases</title>
 </head>
 <style>
-    body {
-       font-family: 'Montserrat', sans-serif;
-   }
-   .mainheader{
+     body {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .mainheader{
+           
+           position: sticky;
+           top: 0;
+           
+           
+       }
+        /* upper header */
+       .upheader{
+           height: 23px;
+           background-color: rgb(222, 222, 222);
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 12px;
+           padding: 2px 30px 2px 30px;
+           margin-top: -10px;
+       }
+       .ulist,.lefthead,.righthead{
+           
+           display: flex;
+           align-items: center;
+           
+           
+       }
+       .list{
+           list-style: none;
+           padding: 0 10px;
+           align-items: center;
+           
           
-          position: sticky;
-          top: 0;
-          
-          
-      }
-       /* upper header */
-      .upheader{
-          height: 23px;
-          background-color: rgb(222, 222, 222);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 12px;
-          padding: 2px 30px 2px 30px;
-          margin-top: -10px;
-      }
-      .ulist,.lefthead,.righthead{
-          
-          display: flex;
-          align-items: center;
-          
-          
-      }
-      .list{
-          list-style: none;
-          padding: 0 10px;
-          align-items: center;
-          
+       }
+       #fontmob{
+           font-size: 20px;
+           align-items: center;
+       }
+       .listlogo{
+           margin-left: -5px;
+           list-style: none;
+       }
+       /* mid header */
+
+       .midheader{
+           height: 45px;
+           background-color: white;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 15px;
+           padding: 5px 80px 5px 80px;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
          
-      }
-      #fontmob{
-          font-size: 20px;
-          align-items: center;
-      }
-      .listlogo{
-          margin-left: -5px;
-          list-style: none;
-      }
-      /* mid header */
+       }
+       .productpage>img{
+           width: 150px;
+       }
+       #searchbar{
+           width: 270px;
+           background-color: rgb(222, 222, 222);
+           height: 35px;
+           border: none;
+           font-size: 12px;
+           border-radius: 4px;
+           padding: 5px;
+       }
+       .productpage{
+           text-decoration: none;
+           color: black;
+       }
+       .productpagett{
+           text-decoration: none;
+           color: black;
 
-      .midheader{
-          height: 45px;
-          background-color: white;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 15px;
-          padding: 5px 80px 5px 80px;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-        
-      }
-      .productpage>img{
-          width: 150px;
-      }
-      #searchbar{
-          width: 270px;
-          background-color: rgb(222, 222, 222);
-          height: 35px;
-          border: none;
-          font-size: 12px;
-          border-radius: 4px;
-          padding: 5px;
-      }
-      .productpage{
-          text-decoration: none;
-          color: black;
-      }
-      .productpagett{
-          text-decoration: none;
-          color: black;
-
-      }
-      .productpagett:hover {
-         
-          text-decoration: underline;
+       }
+       .productpagett:hover {
           
-          color: black;
-          
-      }
-      /* LOWER HEADER */
+           text-decoration: underline;
+           
+           color: black;
+           
+       }
+       /* LOWER HEADER */
 
-      .lowheader{
-          
-          display: block;
-          margin: auto;
-          display: flex;
-          justify-content: space-evenly;
-          padding: 10px 250px;
-          font-size: 18px;
-          height: 45px;
-          background-color: white;
-          
-      }
+       .lowheader{
+           
+           display: block;
+           margin: auto;
+           display: flex;
+           justify-content: space-evenly;
+           padding: 10px 250px;
+           font-size: 18px;
+           height: 45px;
+           background-color: white;
+           
+       }
 
 
 
 
-   #btnAddToCart {
-       width: 50%;
-       background-color: floralwhite;
-       border-radius: 5px;
-       margin: auto;
-       margin-bottom: 20px;
-       cursor: pointer;
-   }
-   #btnAddToCart:hover {
-       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
+    
 
-   #Containers  {
-       display: grid;
-       grid-template-columns: repeat(4,1fr);
-       gap: 20px;
-   }
-   #childDiv {
-       width: 100%;
-       height: 100%;
-       border-radius: 20px;
-       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-       text-align: center;
-   }
-
-   
-   #childDiv > img {
-       width: 50%;
-   }
-   #priceBox {
-       display: flex;
-       justify-content: space-between;
-       width: 30%;
-   }
-    p + p {
-       text-decoration: line-through;
-       color: crimson;
+    #Containers  {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+    #childDiv {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        text-align: center;
+    }
+    #childDiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
+    
+    #childDiv > img {
+        width: 50%;
+    }
+    #priceBox {
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+    }
+     p + p {
+        text-decoration: line-through;
+        color: crimson;
+     }
+
 </style>
-
-
-
-
 <body>
     <!-- From here navbar section is starting -->
     <header class="mainheader">
@@ -213,7 +202,7 @@
     </header> 
     <!-- Till here it is navbar section-->
 
-    <h1>Xiaomi Covers And Cases</h1>
+    <h1>Apple Covers And Cases</h1>
     <div id="Containers">
 
     </div>
@@ -276,10 +265,13 @@ var data = [
 
    display(data);
 
-    function display(list) {
+   function display(list) {
         list.map(function(elem) {
             var div = document.createElement("div");
             div.setAttribute("id","childDiv");
+            div.addEventListener("click",function() {
+                addToCart(elem);
+            });
     
             var image = document.createElement("img");
             image.setAttribute("src", elem.img_url);
@@ -296,15 +288,11 @@ var data = [
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-            var btn = document.createElement("button");
-            btn.textContent = "ADD TO CART";
-            btn.setAttribute("id","btnAddToCart");
-            btn.addEventListener("click",function() {
-                addToCart(elem);
-            });
+    
+           
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox,btn);
+            div.append(image,title,priceBox);
             document.querySelector("#Containers").append(div);
         })
         // console.log(data);
@@ -315,4 +303,6 @@ var data = [
         localStorage.setItem("cart",JSON.stringify(cartItems));
     }
 </script>
+
+
 </html>

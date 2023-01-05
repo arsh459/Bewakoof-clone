@@ -110,19 +110,6 @@
 
 
 
-
-   #btnAddToCart {
-       width: 50%;
-       background-color: floralwhite;
-       border-radius: 5px;
-       margin: auto;
-       margin-bottom: 20px;
-       cursor: pointer;
-   }
-   #btnAddToCart:hover {
-       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   }
-
    #Containers  {
        display: grid;
        grid-template-columns: repeat(4,1fr);
@@ -135,6 +122,10 @@
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        text-align: center;
    }
+
+   #childDiv:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
    
    #childDiv > img {
@@ -276,10 +267,13 @@ var data = [
 
    display(data);
 
-    function display(list) {
+   function display(list) {
         list.map(function(elem) {
             var div = document.createElement("div");
             div.setAttribute("id","childDiv");
+            div.addEventListener("click",function() {
+                addToCart(elem);
+            });
     
             var image = document.createElement("img");
             image.setAttribute("src", elem.img_url);
@@ -296,15 +290,11 @@ var data = [
             var mrp = document.createElement("p");
             mrp.textContent = elem.strikedOffPrice;
 
-            var btn = document.createElement("button");
-            btn.textContent = "ADD TO CART";
-            btn.setAttribute("id","btnAddToCart");
-            btn.addEventListener("click",function() {
-                addToCart(elem);
-            });
+    
+           
 
             priceBox.append(price,mrp);
-            div.append(image,title,priceBox,btn);
+            div.append(image,title,priceBox);
             document.querySelector("#Containers").append(div);
         })
         // console.log(data);
