@@ -4,10 +4,315 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Xiaomi Covers And Cases</title>
-    <h1>Xiaomi Covers And Cases</h1>
 </head>
+<style>
+    body {
+       font-family: 'Montserrat', sans-serif;
+   }
+   .mainheader{
+          
+          position: sticky;
+          top: 0;
+          
+          
+      }
+       /* upper header */
+      .upheader{
+          height: 23px;
+          background-color: rgb(222, 222, 222);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 12px;
+          padding: 2px 30px 2px 30px;
+          margin-top: -10px;
+      }
+      .ulist,.lefthead,.righthead{
+          
+          display: flex;
+          align-items: center;
+          
+          
+      }
+      .list{
+          list-style: none;
+          padding: 0 10px;
+          align-items: center;
+          
+         
+      }
+      #fontmob{
+          font-size: 20px;
+          align-items: center;
+      }
+      .listlogo{
+          margin-left: -5px;
+          list-style: none;
+      }
+      /* mid header */
+
+      .midheader{
+          height: 45px;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 15px;
+          padding: 5px 80px 5px 80px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        
+      }
+      .productpage>img{
+          width: 150px;
+      }
+      #searchbar{
+          width: 270px;
+          background-color: rgb(222, 222, 222);
+          height: 35px;
+          border: none;
+          font-size: 12px;
+          border-radius: 4px;
+          padding: 5px;
+      }
+      .productpage{
+          text-decoration: none;
+          color: black;
+      }
+      .productpagett{
+          text-decoration: none;
+          color: black;
+
+      }
+      .productpagett:hover {
+         
+          text-decoration: underline;
+          
+          color: black;
+          
+      }
+      /* LOWER HEADER */
+
+      .lowheader{
+          
+          display: block;
+          margin: auto;
+          display: flex;
+          justify-content: space-evenly;
+          padding: 10px 250px;
+          font-size: 18px;
+          height: 45px;
+          background-color: white;
+          
+      }
+
+
+
+
+   #btnAddToCart {
+       width: 50%;
+       background-color: floralwhite;
+       border-radius: 5px;
+       margin: auto;
+       margin-bottom: 20px;
+       cursor: pointer;
+   }
+   #btnAddToCart:hover {
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   }
+
+   #Containers  {
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       gap: 20px;
+   }
+   #childDiv {
+       width: 100%;
+       height: 100%;
+       border-radius: 20px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       text-align: center;
+   }
+
+   
+   #childDiv > img {
+       width: 50%;
+   }
+   #priceBox {
+       display: flex;
+       justify-content: space-between;
+       width: 30%;
+   }
+    p + p {
+       text-decoration: line-through;
+       color: crimson;
+    }
+
+</style>
+
+
+
+
 <body>
+    <!-- From here navbar section is starting -->
+    <header class="mainheader">
+        <header class="upheader">
+            <div class="lefthead">
+                <ul class="ulist">
+                    <li class="list">Offers</li>
+                    <li class="list">Fanbook</li>
+                    <li class="list"><i class="fa-solid fa-mobile-screen-button"></i></li>
+                    <li class="listlogo">Download App</li>
+                    <li class="list">TriBe Membership</li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <ul class="ulist">
+                    <li class="list">Contact Us</li>
+                    <li class="list">Track Order</li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="midheader">
+            <div class="lefthead">
+                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                
+                <ul class="ulist">
+                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="searchbar"  placeholder="  Search By Product,category or collection ">
+                
+            </div>
+                <ul class="ulist">
+                    <li class="listlogo">|</li>
+                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="lowheader">
+
+            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="men.html">MEN</a>
+            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="covers.html">ACCESSORIES</a>
+            <a class="productpage" href="">WINTERWEAR</a>
+        </header>
+    </header> 
+    <!-- Till here it is navbar section-->
+
+    <h1>Xiaomi Covers And Cases</h1>
+    <div id="Containers">
+
+    </div>
     
 </body>
+<script>
+
+var data = [
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/kgmla4w0/cases-covers/back-cover/t/p/g/apple-mhll3zm-a-original-imafwtnucj8nqnkf.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 Mini",
+    price : "Rs./- 2199",
+    strikedOffPrice : "2599",
+    id : 1},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/j/a/8/-original-imagdv6nhexzrvhm.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 2099",
+    strikedOffPrice : "2399",
+    id : 2},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/a/y/j/-original-imagch76vsdhzhan.jpeg?q=70",
+    title : "APPLE back cover for iphone 13 pro max",
+    price : "Rs./- 4199",
+    strikedOffPrice : "5599",
+    id : 3},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/1/5/-original-imagdv6ntrxdjqcq.jpeg?q=70",
+    title : "APPLE back cover for iphone 11 pro max",
+    price : "Rs./- 3199",
+    strikedOffPrice : "3599",
+    id : 4},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2nmnww0/cases-covers/b/w/e/-original-imagdy2hjkvnfa6m.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 2899",
+    strikedOffPrice : "3799",
+    id : 5},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/z/i/u/-original-imagdv6na8nhswgy.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 Mini",
+    price : "Rs./- 2099",
+    strikedOffPrice : "2599",
+    id : 6},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/8/w/4/-original-imagdv6nyzdj6sfv.jpeg?q=70",
+    title : "APPLE back cover for iphone 11 Mini",
+    price : "Rs./- 4199",
+    strikedOffPrice : "5099",
+    id : 7},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/9/4/s/-original-imagdv6nm4stnkxa.jpeg?q=70",
+    title : "APPLE back cover for iphone 14 pro max",
+    price : "Rs./- 4499",
+    strikedOffPrice : "5199",
+    id : 8},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l2jcccw0/cases-covers/4/o/n/-original-imagdv6nqnhvs2w3.jpeg?q=70",
+    title : "APPLE back cover for iphone 13 Mini",
+    price : "Rs./- 2599",
+    strikedOffPrice : "3099",
+    id : 9},
+    {img_url : "https://rukminim1.flixcart.com/image/612/612/l0r1j0w0/cases-covers/m/0/8/-original-imagch77fy4rjeh9.jpeg?q=70",
+    title : "APPLE back cover for iphone 12 pro max",
+    price : "Rs./- 3199",
+    strikedOffPrice : "4199",
+    id : 10}
+    ];
+
+   display(data);
+
+    function display(list) {
+        list.map(function(elem) {
+            var div = document.createElement("div");
+            div.setAttribute("id","childDiv");
+    
+            var image = document.createElement("img");
+            image.setAttribute("src", elem.img_url);
+            image.setAttribute("alt", elem.id);
+
+            title = document.createElement("h2");
+            title.textContent = elem.title;
+
+            var priceBox = document.createElement("div");
+            priceBox.setAttribute("id","priceBox");
+
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+            var mrp = document.createElement("p");
+            mrp.textContent = elem.strikedOffPrice;
+
+            var btn = document.createElement("button");
+            btn.textContent = "ADD TO CART";
+            btn.setAttribute("id","btnAddToCart");
+            btn.addEventListener("click",function() {
+                addToCart(elem);
+            });
+
+            priceBox.append(price,mrp);
+            div.append(image,title,priceBox,btn);
+            document.querySelector("#Containers").append(div);
+        })
+        // console.log(data);
+    }
+    var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    function addToCart(item) {
+        cartItems.push(item);
+        localStorage.setItem("cart",JSON.stringify(cartItems));
+    }
+</script>
 </html>

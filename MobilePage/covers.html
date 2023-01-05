@@ -4,35 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Mobile Covers</title>
 </head>
 <style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .mainheader{
+           
+           position: sticky;
+           top: 0;
+           
+           
+       }
+        /* upper header */
+       .upheader{
+           height: 23px;
+           background-color: rgb(222, 222, 222);
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 12px;
+           padding: 2px 30px 2px 30px;
+           margin-top: -10px;
+       }
+       .ulist,.lefthead,.righthead{
+           
+           display: flex;
+           align-items: center;
+           
+           
+       }
+       .list{
+           list-style: none;
+           padding: 0 10px;
+           align-items: center;
+           
+          
+       }
+       #fontmob{
+           font-size: 20px;
+           align-items: center;
+       }
+       .listlogo{
+           margin-left: -5px;
+           list-style: none;
+       }
+       /* mid header */
+
+       .midheader{
+           height: 45px;
+           background-color: white;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           font-size: 15px;
+           padding: 5px 80px 5px 80px;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+         
+       }
+       .productpage>img{
+           width: 150px;
+       }
+       #searchbar{
+           width: 270px;
+           background-color: rgb(222, 222, 222);
+           height: 35px;
+           border: none;
+           font-size: 12px;
+           border-radius: 4px;
+           padding: 5px;
+       }
+       .productpage{
+           text-decoration: none;
+           color: black;
+       }
+       .productpagett{
+           text-decoration: none;
+           color: black;
+
+       }
+       .productpagett:hover {
+          
+           text-decoration: underline;
+           
+           color: black;
+           
+       }
+       /* LOWER HEADER */
+
+       .lowheader{
+           
+           display: block;
+           margin: auto;
+           display: flex;
+           justify-content: space-evenly;
+           padding: 10px 250px;
+           font-size: 18px;
+           height: 45px;
+           background-color: white;
+           
+       }
+
+
+
    
     #parent {
        width: 70%;
        background-color: rgb(244, 241, 241);
        margin: auto;
-       margin-top: 100px;
+       margin-top: 40px;
        padding: 20px;
     }
-    #parent > h1 {
-        font-family: garamond;
-        font-style: oblique;
-    }
 
+    #div2 {
+        display: flex;
+    }
+    #sideImage {
+        width: 35%;
+        height: 400px;
+        margin-left: 40px;
+        margin-right: 60px;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #sideImage > img {
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
     p {
-        font-family: garamond;
-        font-style: oblique;
-        font-size: larger;
+        font-size: large;
     }
     
     #brands {
         background-color:rgb(236, 234, 234);
         width: 60%;
         display: grid;
+        margin-left: 60px;
         grid-template-columns: repeat(4,1fr);
         gap: 20px;
-        margin: auto;
         margin-bottom: 60px;
         border-radius: 10px;
         padding: 30px;
@@ -58,44 +171,108 @@
 
 <body>
 
-    <div id="parent">
-        <h1>Mobile Covers And Cases</h1>
-    <div id="brands">
-        <div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX/ZwD/////bBH/aQn/WgD/YwD/kGH/XQD/7uf/18r/6N//0L7/n3f/YQD/WAD/bhX/q4v/g0f/dS3/xrD/bx3/ejf/lGb/m3H/uZ7/ilT/0sH/3dD/v6b/jlz/gUT/ciX/9/P/sJL/nXP/hU7nfCqhAAAC90lEQVR4nO3d61LqMBhG4QQJsZbWQynIRvHA/d+jKD/2kAaHOnTK+81aM/4DyQM1lQ4Jzn/XzO6dtRbL5sfm9j9ljGHs8QxQiFVxED7XY49lsOqXb2FpF7gnFnthHHsUgxa8a2wLY+lmFieZ/4WVW4w9hoFrxx7A4E3GHsDgIdQPoX4I9UOoH0L9EOqHUD+E+iHUD6F+CPVDqB9C/RDqh1A/hPoh1A+hfgj1Q6gfQv0Q6odQP4T6IdQPoX4I9UOoH0L9EHYLF+rPjza0ML7OLtB6+xbrM9ZXx3Xnrq89V4T2FcbCX6r3zfOu/h0ZnzP3K/sR+wqntxcT/ihfJr+NN/t83k2VhPuaUBkXej8/uVzeitAXp/4azQj9+yJ/pNoRet9miZaEeaIpoZ9k/hZtCW8zM6otoW+6Izcm9NvOcWpNeNc5Tq0J/Tp9Ec0Ji3Ts5oTe/Gvo58lp/3qE67ens9ouP359B52+ub0aYVmffXWmitP5+0lheta/HmGv6wpVnbs2cehqX8OeF4ems1PCp+O5Rlbo4vKEcG1F+LPbX67V8WQqLHTT/HTzaUdYPWSFcztCV5kXTrOnfkvC6sO6MGTPiaaErXnhvbIwxMlN0uQmfRaUhfkD8F9CVBbmp0mfvDOSFub/X0GIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkR4KPlwrPbnS2OZecyH43GFXW7wm2RgMbcuqD1e2ZV9rpph9xhycfuY1qYPWS126W12j51xVZ1f9NjZOSK2ndtsB94n6rzdt87b2+tvtxl8ry+5EOqHUD+E+iHUD6F+CPVDqB9C/RDqh1A/hPoh1A+hfgj1Q6gfQv0Q6odQP4T6IdQPoX4I9UOoH0L9EOqHUD+E+iHUD6F+CPWbuMXYQxi20Lpl3+VuWoVP13NJplqxdD7/1fRGCs47X2S+8ttM9WYv9C9miaFu/LfQFyFanG5CdBt/EHpfrp7Sb9mSr10dVtZ/ATxvWzUABGu1AAAAAElFTkSuQmCC" alt="">
-            <a href="xiaomi.html"> <p>Xiaomi</p></a>
-        </div>
-        
-        <div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX////1BRT1AAD1AA71ISr7s7T5kZT5hIj1AAj2SE33Zmr/+Pn5iIr6mp3+6er1CBn94uP2OUH80NH7t7n6nqD93d71Iyz4gIP4fYD7srP7vr/1GCL6qq34dnn5jJD8x8n+8vP3UFX3XWL2NDtqc9+BAAACAElEQVR4nO3cYXPSMACA4ZVu2E3G5mC66RTE//8fvXlAQ62HpZAmvef5Ssjl/cIlzZWrKwAAAAAAAAAAgMF9DAy9lsuYTWpDr+UyppNiq7weei2XoTB/CvOnMH8K86cwfwrzpzB/CvMXFH4ecBmTk306mOdLy4hir2z5NFphcaLq9mCeWceJytEXFgoVKlSoUGGahaPf00xeFjcdvH49mOfptTlgcVfvS7/9PfXbAIWLM0+dys67Lrw589SJnJ4U9qAwEoU9KIxEYQ8KI1HYg8JIuha+/eN82CLTwuXuC40zfotMC7+PvvC6/O/CH/UTi4f+Cz1Zx8Ln/fjjhav7veUZVnqqjoV3HQoT0a1wVQ8fZ+FT8IBwjIXrl/Cp76gK14/z59XyZ/iId2SF0z+/+FVRjLbwvu1OQmEyFL5TmDaF76Ztt56jKlzPd9abDjvv6eRhq8jo/rDL2WI6KbeqjE7A3Qp3Y3M64ysMKYxEYYPCkMJIFDYoDCmMRGGDwpDCSBQ2KAwpjERhg8KQwkgUNigMKYxEYcOmvkn8dWxsnoXzx735sbF5FnahMBKFPSiMRGEPCiNR2IPCSBT2kF7hBf/bJI3CajP7cE6z2yqxwqLq+CdDx9QvaKRSeDkKFSpUqFBh6oVlBIO+b1Fcx3D0BgAAAAAAAAAAAAAAAACApPwGXbMs9kSX70MAAAAASUVORK5CYII=" alt="">
-            <a href="oneplus.html"> <p>Oneplus</p></a>
-        </div>
-        <div>
-            <img src="data:image/png;base64,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" alt="">
-            <a href="apple.html"><p>Apple</p></a>
-        </div>
-        <div>
-            <img src="data:image/png;base64,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" alt="">
-            <a href="samsung.html"> <p>Samsung</p></a>
-        </div>
-        <div>
-            <img src="data:image/png;base64,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" alt="">
-            <a href="realme.html"><p>RealMe</p></a>
-        </div>
-        <div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADgCAMAAADCMfHtAAAAflBMVEUAAAD///8FBQWmpqZ4eHh7e3vBwcGXl5fKysra2tqqqqqIiIhYWFhTU1PT09P29vZFRUWzs7OhoaHu7u6NjY3n5+dgYGAoKCgfHx85OTlOTk67u7sNDQ3d3d35+flycnIxMTFoaGiCgoJHR0cVFRUkJCQ/Pz+bm5sTExM2NjZ785yuAAAG4klEQVR4nO2aaXuiMBDHpR5Y6lEpVVdtPXq4/f5fcIuQmRyTECr7PM7u/F8JhiG/YZhMEnp3vX9bdz0h5C4h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h5C8h/In2q85NXqHuCT/nSTLt2OY16pzwMyl1Q4hdE1aASTLp1Oo16phQAd7QU+yW8JCgDh3avUbdEo40wlGHdq9Rt4QPGuGwQ7vXqOP3cAGAeZdmr1HXuXRxa4Ddj4f5jQH+hZpm8A2YdWzzGv2FunQzO3Vt8hrJ3OJmdFjuB7qGxTnPsixPHwaT4FzGJZxuR2nLu68XsxEUout8lP1SBx/ZGA/i9L64H23MU6vzfRLUU+AmDmF6ueTYpk9DPX3u9eF+0j6xVtcX2pnpLIxXafbmMWgTTusLPtv2SU0n6oOeftCivDnWl8AzuRvH8JXylIk24Va5JL5Txh2GOtSgPpi3N6bGm2UsX3mbxxhCiIh9bJ+UT5JxeZTXB4vyIFV/bWON9a0Hohe6EaJeLpsQCsvXyD6hk3P9+gvuBv5bxhl7NI2hi65AtAm/oHGk3+dwwaNOWD0DSIGR/noCY+vycJi0lptvnFyKU7yohQiI0eS+pxNW79Eb/Bs1W8yg+UN5iAsG35rlxWl40akoijRN836aFml/MX7Wm7mvvEO4CzR2dUTbn0Yn+z0DOOq9xqCuvIVPdF4EL3zAQHJd6Y74GBqL5k6h5UF1QqWKmlDrZbMx7OclRs8tOpJDW2eBiKjaME439l+2cKxS2d0m/AUtxk3G8HlfYhS9F1PIT6D1i/UPVZe+qsZPDWaHrlmbUEuHDeM+9rGKUXgscTMVfOWt50IR4gAQnuetMTTe1TmHsPfsNiJlxSj4OXZFS5UX9gXk3AITpK/YuwjLYRzuXEJcYQzWSXjPKkbBzY1oSmP6Cnr2BP4MxWlBPWqXUIvTB78xjJsqRn+w4AOuNHMNTTiF+/njdAVtdDcQhL0XaOmfyMG7X8coBHeLfSxVcZqTP88MGMdebz7FGNULXooQfWHnORAmZfWc68PnZjDQqb7GfBF9c3wYx3zj/gn6ZMQRRajFs2duvYcGdYxC9RgxJoMOlo1KPkKsgel7YOljepkk1OKUnovD3ypGYewIFzO0GbNH3nUarBLIeQGG1cE4TxNinJJRh5N4yEXH+sSgEUvTvBUhjmPUvOAIfbLiThFaGQrj1ES/CAsHjC91g1a7Hy0Jg/UWpD47dyhCO7YxLzlD7Dv8BTGK2bzVopjjp1KB1USsfB1H4vD8Yf3jI8T6xxliEV4bLz/qU2326FbkvUPrpVhvrc0/llSfKilCZ/6M6xFWnGIAG773+SMgld6jxsOLvOMYxKhbh3kJtUd1oG9i+lGl38b5DUolLDM1Bte80b3GmIfTq51ziZ8Q49TwCwaKOYdQhhonXSCo2szT4VV99LtW6x3hJJHKVceI9wdrBG2+jy+7FQ8wG4p+iGPaUJgQ/a4NGXCOcm/I9TPXGCZsJx5UVRW72Ap1kZUXG3Zm0O+QoHCspy4IEWIdBEGPMeqs40BqilucfvR1q2nvCcuNOlre/H0qFXx9cGivgx4dSLSHKVwMIq5i2SNoE6E2HF+mEOuG+4YTBPrrgoijDlU3waQ9mTcubOLr7AR14/6htq6e9lZoyR4jazWkQLy8fzhqX9+Qe13antMsuGh+whU9t4pu3iH1bN15yqkGwj1tzLO+/qq3eR5vs36eLb6Vff84n89pqXNmbL65M/Zmwt9kn3wzU2PfgtCIMuZLl49U46CI20bsch8pU1+exmP/rSrNCWPe/dgJ0TgkKjfE7OPnrinvGqZ6Rl7CjWssUF0TrQMigz3qS4Wtbcq/PqW84e+1s6HkXbwp9f5iN/eLnkvGfYvRN00Rs1glNa8LLAJa2aZptDslcRr9pq+P/Npkqb0+r8HPGOoqxa3JUQf9uUQsxBTG/hmtrS8xxH9Pc6pHjfvAsm6p97I79I46alknpHked/evYvRCpajK4/eLkM/bfDH0OZnEfBuzOcXsaU+HxdDrd49269Vut2v5iRObb6J+LCHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkLyHkr/+A8A+SfzqrGC1lOwAAAABJRU5ErkJggg==" alt="">
-            <a href="vivo.html"><p>VIVO</p></a>
-        </div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb43kyAAiGFtj0N9UI6mpz-zgh8pXWAF-DHQ&usqp=CAU" alt="">
-            <a href="oppo.html"><p>OPPO</p></a>
-        </div>
-        <div>
-            <img src="data:image/png;base64,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" alt="">
-            <a href="nokia.html"><p>Nokia</p></a>
-        </div>
- </div>
+    <!-- From here navbar section is starting -->
+    <header class="mainheader">
+        <header class="upheader">
+            <div class="lefthead">
+                <ul class="ulist">
+                    <li class="list">Offers</li>
+                    <li class="list">Fanbook</li>
+                    <li class="list"><i class="fa-solid fa-mobile-screen-button"></i></li>
+                    <li class="listlogo">Download App</li>
+                    <li class="list">TriBe Membership</li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <ul class="ulist">
+                    <li class="list">Contact Us</li>
+                    <li class="list">Track Order</li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="midheader">
+            <div class="lefthead">
+                <a class="productpage" href="home.html"><img src="C:\Users\ch krishna\Desktop\my project\ConstructWeekProject_1\images home\bewakoof-logo-large.png" alt="logo"></a>
+                
+                <ul class="ulist">
+                    <li class="list"><a class="productpagett" href="mens.html">MEN</a> </li>
+                    <li class="list"><a class="productpagett" href="women.html">WOMEN</a></li>
+                    <li class="list"><a class="productpagett" href="all.html">MOBILE COVERS</a></li>
+                </ul>
+            </div>
+            <div class="righthead">
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="searchbar"  placeholder="  Search By Product,category or collection ">
+                
+            </div>
+                <ul class="ulist">
+                    <li class="listlogo">|</li>
+                    <li class="list"><a class="productpage" href="mens.html">Login</a></li>
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-regular fa-heart"></a></i></li>
+                    
+                    <li class="list"><a class="productpage" href="mens.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
+                    
+                </ul>
+            </div>
+        </header>
+        <header class="lowheader">
+
+            <a class="productpage" href="">LIVE NOW!</a>
+            <a class="productpage" href="men.html">MEN</a>
+            <a class="productpage" href="">WOMEN</a>
+            <a class="productpage" href="covers.html">ACCESSORIES</a>
+            <a class="productpage" href="">WINTERWEAR</a>
+        </header>
+    </header> 
+    <!-- Till here it is navbar section-->
+
+
+    <!-- Content box is starting here-->
+<div id="parent">
+    <div  id="div1"><h1>Mobile Covers And Cases</h1></div>
+    <div id="div2">
+        <div id="brands">
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX/ZwD/////bBH/aQn/WgD/YwD/kGH/XQD/7uf/18r/6N//0L7/n3f/YQD/WAD/bhX/q4v/g0f/dS3/xrD/bx3/ejf/lGb/m3H/uZ7/ilT/0sH/3dD/v6b/jlz/gUT/ciX/9/P/sJL/nXP/hU7nfCqhAAAC90lEQVR4nO3d61LqMBhG4QQJsZbWQynIRvHA/d+jKD/2kAaHOnTK+81aM/4DyQM1lQ4Jzn/XzO6dtRbL5sfm9j9ljGHs8QxQiFVxED7XY49lsOqXb2FpF7gnFnthHHsUgxa8a2wLY+lmFieZ/4WVW4w9hoFrxx7A4E3GHsDgIdQPoX4I9UOoH0L9EOqHUD+E+iHUD6F+CPVDqB9C/RDqh1A/hPoh1A+hfgj1Q6gfQv0Q6odQP4T6IdQPoX4I9UOoH0L9EHYLF+rPjza0ML7OLtB6+xbrM9ZXx3Xnrq89V4T2FcbCX6r3zfOu/h0ZnzP3K/sR+wqntxcT/ihfJr+NN/t83k2VhPuaUBkXej8/uVzeitAXp/4azQj9+yJ/pNoRet9miZaEeaIpoZ9k/hZtCW8zM6otoW+6Izcm9NvOcWpNeNc5Tq0J/Tp9Ec0Ji3Ts5oTe/Gvo58lp/3qE67ens9ouP359B52+ub0aYVmffXWmitP5+0lheta/HmGv6wpVnbs2cehqX8OeF4ems1PCp+O5Rlbo4vKEcG1F+LPbX67V8WQqLHTT/HTzaUdYPWSFcztCV5kXTrOnfkvC6sO6MGTPiaaErXnhvbIwxMlN0uQmfRaUhfkD8F9CVBbmp0mfvDOSFub/X0GIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkR4KPlwrPbnS2OZecyH43GFXW7wm2RgMbcuqD1e2ZV9rpph9xhycfuY1qYPWS126W12j51xVZ1f9NjZOSK2ndtsB94n6rzdt87b2+tvtxl8ry+5EOqHUD+E+iHUD6F+CPVDqB9C/RDqh1A/hPoh1A+hfgj1Q6gfQv0Q6odQP4T6IdQPoX4I9UOoH0L9EOqHUD+E+iHUD6F+CPWbuMXYQxi20Lpl3+VuWoVP13NJplqxdD7/1fRGCs47X2S+8ttM9WYv9C9miaFu/LfQFyFanG5CdBt/EHpfrp7Sb9mSr10dVtZ/ATxvWzUABGu1AAAAAElFTkSuQmCC" alt="">
+                <a href="xiaomi.html"> <p>Xiaomi</p></a>
+            </div>
+            
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX////1BRT1AAD1AA71ISr7s7T5kZT5hIj1AAj2SE33Zmr/+Pn5iIr6mp3+6er1CBn94uP2OUH80NH7t7n6nqD93d71Iyz4gIP4fYD7srP7vr/1GCL6qq34dnn5jJD8x8n+8vP3UFX3XWL2NDtqc9+BAAACAElEQVR4nO3cYXPSMACA4ZVu2E3G5mC66RTE//8fvXlAQ62HpZAmvef5Ssjl/cIlzZWrKwAAAAAAAAAAgMF9DAy9lsuYTWpDr+UyppNiq7weei2XoTB/CvOnMH8K86cwfwrzpzB/CvMXFH4ecBmTk306mOdLy4hir2z5NFphcaLq9mCeWceJytEXFgoVKlSoUGGahaPf00xeFjcdvH49mOfptTlgcVfvS7/9PfXbAIWLM0+dys67Lrw589SJnJ4U9qAwEoU9KIxEYQ8KI1HYg8JIuha+/eN82CLTwuXuC40zfotMC7+PvvC6/O/CH/UTi4f+Cz1Zx8Ln/fjjhav7veUZVnqqjoV3HQoT0a1wVQ8fZ+FT8IBwjIXrl/Cp76gK14/z59XyZ/iId2SF0z+/+FVRjLbwvu1OQmEyFL5TmDaF76Ztt56jKlzPd9abDjvv6eRhq8jo/rDL2WI6KbeqjE7A3Qp3Y3M64ysMKYxEYYPCkMJIFDYoDCmMRGGDwpDCSBQ2KAwpjERhg8KQwkgUNigMKYxEYcOmvkn8dWxsnoXzx735sbF5FnahMBKFPSiMRGEPCiNR2IPCSBT2kF7hBf/bJI3CajP7cE6z2yqxwqLq+CdDx9QvaKRSeDkKFSpUqFBh6oVlBIO+b1Fcx3D0BgAAAAAAAAAAAAAAAACApPwGXbMs9kSX70MAAAAASUVORK5CYII=" alt="">
+                <a href="oneplus.html"> <p>Oneplus</p></a>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <a href="apple.html"><p>Apple</p></a>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <a href="samsung.html"> <p>Samsung</p></a>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <a href="realme.html"><p>RealMe</p></a>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <a href="vivo.html"><p>VIVO</p></a>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb43kyAAiGFtj0N9UI6mpz-zgh8pXWAF-DHQ&usqp=CAU" alt="">
+                <a href="oppo.html"><p>OPPO</p></a>
+            </div>
+            <div>
+                <img src="data:image/png;base64,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" alt="">
+                <a href="nokia.html"><p>Nokia</p></a>
+            </div>
+     </div>
+     <div id="sideImage"><img src="https://images.bewakoof.com/uploads/grid/app/mobile-cover-1x1-1672668872.jpg" alt=""></div>
     </div>
+</div>
+
+<!-- Content box is Ending here -->
     
 </body>
 </html>
