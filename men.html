@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Page</title>
+    <style>
+        #parent{
+            display:flex;
+            justify-content: space-around;
+            width:85%;
+            margin:auto;
+        }
+        #filter{
+            width:20%;
+            position:-webkit-sticky;
+            top:0;
+        }
+        #image{
+            width:70%;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:2%;
+            padding-top: 50px;
+            
+        }
+        #image>div>img{
+            width:100%;
+        }
+        .Brand{
+            margin-top:2px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .Desc{
+            margin-top:-10px;
+            font-size: 14px;
+            color:grey;
+
+        }
+        .actual_price{
+            font-size:20px;
+            font-weight: bold;
+        }
+        .cprice{
+            font-size:15px;
+            color:grey;
+            text-decoration: line-through;
+        }
+        #image>div>p:nth-child(4){
+            margin-top:0px;
+        }
+        #image>div>p:nth-child(5){
+            font-weight: bold;
+            font-size: 14px;
+            color:black;
+            margin-top:-9px;
+            margin-left:8px;
+            font-family: arial;
+        }
+        #image>div>p:nth-child(5)>span{
+            font-size: 18px;
+        }
+        
+        #filter>select{
+            display:block;
+            font-size: 20px;
+            width:100%;
+            border:none;
+            border-bottom: 1px solid grey;
+            height:40px;
+        }
+        #filter>p{
+            margin-left: 5px;
+            color: grey;
+        }
+        #main_Tag{
+            width:80%;
+            margin:auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="main_Tag">Men Clothing</h1>
+    <div id="parent">
+        <div id="filter">
+            <p>FILTERS</p>
+            <select id="size">
+                <option value="">Size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <select id="rating">
+                <option value="">Rating</option>
+                <option value="4">4 and above</option>
+                <option value="3">3 and above</option>
+                <option value="2">2 and above</option>
+                <option value="1">1 and above</option>
+            </select>
+            <select id="Fbbrand">
+                <option value="">Brand</option>
+                <option value="Bewakoof">Bewakoof</option>
+                <option value="Breakbounce">Breakbounce</option>
+                <option value="Riag">Riag</option>
+            </select>
+            <p>SORT BY</p>
+            <select id="sbp">
+                <option value="">Sort By Price</option>
+                <option value="htl">High to Low</option>
+                <option value="lth">Low to High</option>
+            </select>
+        </div>
+        <div id="image">
+            <!--Appending here-->
+            <!--Adding All the files here-->
+        </div>
+    </div>
+</body>
+</html>
+<script src="men.js"></script>

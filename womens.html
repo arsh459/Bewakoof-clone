@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Page</title>
+    <style>
+        #parent{
+            display:flex;
+            justify-content: space-around;
+            width:85%;
+            margin:auto;
+        }
+        #filter{
+            width:20%;
+            position: -webkit-sticky;
+            top:0;
+        }
+        #image{
+            width:70%;
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:2%;
+            padding-top: 50px;
+            
+        }
+        /* #image:hover{ cursor: pointer;
+         background-color: aliceblue;
+        } */
+        #image>div>img:hover{cursor: pointer;
+            transform: scale(1.015);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: azure;
+            opacity: 50%;
+            color: black;
+           }
+        #image>div>img{
+            width:100%;
+
+        }
+        .Brand{
+            margin-top:2px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .Desc{
+            margin-top:-10px;
+            font-size: 14px;
+            color:grey;
+
+        }
+        .actual_price{
+            font-size:20px;
+            font-weight: bold;
+        }
+        .cprice{
+            font-size:15px;
+            color:grey;
+            text-decoration: line-through;
+        }
+        #image>div>p:nth-child(4){
+            margin-top:0px;
+        }
+        #image>div>p:nth-child(5){
+            font-weight: bold;
+            font-size: 14px;
+            color:black;
+            margin-top:-9px;
+            margin-left:8px;
+            font-family: arial;
+        }
+        #image>div>p:nth-child(5)>span{
+            font-size: 18px;
+        }
+        
+        #filter>select{
+            display:block;
+            font-size: 20px;
+            width:100%;
+            border:none;
+            border-bottom: 1px solid grey;
+            height:40px;
+        }
+        #filter>p{
+            margin-left: 5px;
+            color: grey;
+        }
+        #main_Tag{
+            width:80%;
+            margin:auto;
+        }
+        .sidenav {
+        height: 100%; 
+        width: 160px; 
+        position: fixed; 
+        z-index: 1; 
+        top: 0; 
+        left: 0;
+        background-color: #111; 
+        overflow-x: hidden; 
+        padding-top: 20px;
+        }
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        }
+        @media screen and (max-height: 450px) {
+       .sidenav {padding-top: 15px;}
+       .sidenav a {font-size: 18px;}
+        }
+
+    </style>
+        
+</head>
+<body>
+    <!-- <h1 id="main_Tag">Women Clothing</h1> -->
+    <h1 id="main_Tag">Women Clothing <span>(4471)</span></h1>
+    <div id="parent">
+        <div class="sidenav">
+        <div id="filter">
+            <p>FILTERS</p>
+            <select id="size">
+                <option value="">Size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <select id="rating">
+                <option value="">Rating</option>
+                <option value="4">4 and above</option>
+                <option value="3">3 and above</option>
+                <option value="2">2 and above</option>
+                <option value="1">1 and above</option>
+            </select>
+            
+                <select id="Fbbrand">
+                  <option value="">Brand</option>
+                  <option value="Bewakoof" >Bewakoof</option>
+                  <option value="Campus Sutra" >Campus Sutra</option>
+                  <option value="Aks" >Aks</option>
+                  <option value="Kotty" >Kotty</option>
+                  <option value="Rigo" >Rigo</option>
+                  <option value="Freakins" >Freakins</option>
+                  <option value="Door" >Door</option>
+                  
+                </select>
+              
+            
+          <select id="design">
+            <option value="" >Design</option>
+            <option value="Solid" >Solid</option>
+            <option value="printed" >printed</option>
+            <option value="Graphic print" >Graphic print</option>
+            <option value="Plain" >Plain</option>
+            <option value="Typography" >Typography</option>
+            <option value="AOP" >AOP</option>
+            <option value="Washe" >Washe</option>
+            <option value="Checked" >Checked</option>
+          </select>
+          
+            <select id="sleeve">
+              <option value="" >Sleeve</option>
+              <option value="Full sleeve" >Full sleeve</option>
+              <option value="half sleeve" >half Sleeve</option>
+              <option value="Sleeveless" >Sleeveless</option>
+              <option value="na" >na</option>
+              <option value="Short Sleeve" >Short Sleeve</option>
+              <option value="Long Sleeve" >Long Sleeve</option>
+              <option value="raglan sleeve" >raglan sleeve</option>
+            </select>
+          
+            <p>SORT BY</p>
+            <select id="sbp">
+                <option value="">Sort By Price</option>
+                <option value="htl">High to Low</option>
+                <option value="lth">Low to High</option>
+            </select>
+        </div>
+       </div>
+         <div id="image">
+            <!--Appending here-->
+            <!--Adding All the files here-->
+        </div> 
+    </div>
+</body>
+</html>
+<script src="women.js"></script>
