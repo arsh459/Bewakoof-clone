@@ -52,7 +52,7 @@
     #in{
       height: 60px; 
       width: 90%;
-      margin: 20px ;
+      margin: 25px ;
    
       text-align: center;
       
@@ -136,6 +136,10 @@
       width: 60%;
       font-size: small;
     }
+    #number{
+      border-radius: 8px; height:100%;width: 100%; font-size: 100%; text-align: center; font-weight: 200;
+    }
+  
     
     
    
@@ -167,10 +171,11 @@
          
            <div class="up">
                <div id="in">
-                <input type="text" style="border-radius: 8px; height:100%;width: 100%; font-size: 100%; text-align: center; font-weight: 200;" placeholder="ENTER MOBILE NUMBER">
+                <input id="number" type="text" placeholder="ENTER MOBILE NUMBER">
+                <span id="mass" style="color: red;"></span>
                </div>
                <div id="in">
-                <input type="button"  style="height: 100%;border-radius: 8px;  width: 100%; color: white;background-color: darkcyan;  " value="CONTINUE">
+                <input type="button" onclick="stroreNumber()" style="cursor: pointer; height: 100%;border-radius: 8px;  width: 100%; color: white;background-color: darkcyan;  " value="CONTINUE">
                </div>
                <div id="inline">
                   
@@ -213,6 +218,42 @@
            </div>
          </div>
     </div>
-   
+  
    </body>
 </html>
+<script>
+    function stroreNumber(){
+    event.preventDefault();
+    var a=document.getElementById("number").value;
+    
+    if(a==""){
+      document.getElementById("mass").innerHTML="Please Enter Mobile No"
+      return false;
+      document.getElementById("mass").innerHTML=""
+    }
+   
+    else if(!isNaN(a)&&a.length<10||!isNaN(a)&&a.length>10){
+      document.getElementById("mass").innerHTML="length must be 10 digit"
+      return false;
+      document.getElementById("mass").innerHTML=""
+    }
+    else if(a.charAt(0)<7){
+      document.getElementById("mass").innerHTML="Enter a vailid mobile no"
+      return false;
+      document.getElementById("mass").innerHTML=""
+    } 
+     else if(isNaN(a)){
+      document.getElementById("mass").innerHTML="Enter Only Numeric value"
+      return false;
+      document.getElementById("mass").innerHTML=""
+    }
+    else {
+     window.location.href="signup.html";
+    }
+    var num=document.getElementById("number").value;
+    localStorage.setItem("number1",num);
+    console.log(num);
+  }
+    
+ 
+</script>

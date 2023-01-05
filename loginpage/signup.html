@@ -72,6 +72,7 @@
             border-radius: 6px;
             color: white;
             background-color: darkgray;
+            cursor: pointer;
         }
        #chek{
         display: flex;
@@ -81,6 +82,11 @@
         margin-top: -20px;
         margin-left: 10px;
         margin-right: 10px;
+       }
+       h4{
+        border-bottom: 1px solid black;
+        width: 75%;
+        margin-top:50px;
        }
         
     </style>
@@ -97,10 +103,10 @@
          <form action="">
             <h1>Sign Up</h1>
             <div><h3>Hi new buddy, let's get you started with the bewakoofi!</h3></div>
-            <input type="text" placeholder="Name">
-            <input type="number" placeholder="Mobile">
-            <input type="email" placeholder="Email-ID">
-            <input type="password" placeholder="Password">
+            <input id="name" type="text" placeholder="Name">
+            <h4 id="mob"></h4>
+            <input id="email" type="email" placeholder="Email-ID">
+            <input id="pass" type="password" placeholder="Password">
             <div id="chek">
                  <div id="c">
                     <input type="checkbox">
@@ -109,7 +115,7 @@
                    <p>I want to receive order updates on Whatsapp</p>
                  </div>
             </div>
-            <button type="submit">PROCEED</button>
+            <button onclick="storedata()" id="submit" type="submit" >PROCEED</button>
            
             
          </form>
@@ -119,3 +125,24 @@
     </div>
 </body>
 </html>
+<script>
+    var num1=localStorage.getItem("number1");
+    document.getElementById("mob").textContent=num1;
+    
+    var dataArray=[];
+    function storedata(){
+        event.preventDefault();
+     var objArray={
+        name:document.getElementById("name").value,
+        number:num1,
+        email:document.getElementById("email").value,
+        password:document.getElementById("pass").value
+        
+     };
+     dataArray.push(objArray);
+     localStorage.setItem("store",JSON.stringify(dataArray));
+     var st=JSON.parse(localStorage.getItem("store"));
+     console.log(st);
+     window.location.href="men.html";
+    }
+</script>
