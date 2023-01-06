@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <style>
+        #top_face{
+            border-bottom: 1px solid grey;
+        }
+        #top_face>div{
+            width:80%;
+            margin:auto;
+            margin-bottom: 5px;
+        }
+        #parentdiv{
+            width:80%;
+            margin:auto;
+            font-family:montserrat-bold, sans-serif;
+        }
+        #lower_face{
+            display:block;
+            margin-top:50px;
+
+        }
+        #bag>p{
+            font-size:16px;
+            font-weight:bold
+        }
+        #e_saving{
+            display: flex;
+            justify-content: space-between;
+        }
+        #e_saving>div:first-child{
+            width:55%;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            background-color: #fcffee;
+            font-family: montserrat, sans-serif;
+            border-radius: 10px;
+        }
+        #e_saving>div:first-child>p{
+            margin-left: 10px;
+        }
+        #e_saving>div:last-child{
+            width:40%;
+            background-color: #fdd835;
+            border-radius: 10px;
+        }
+        #cart{
+            display:flex;
+            justify-content: space-between;
+        }
+        #items{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+            width:55%;
+        }
+        #items>div{
+            display: flex;
+            border: 1px solid grey;
+            border-radius: 5px;
+            padding:10px;
+            justify-content: space-between;
+        }
+        #items>div>div:first-child{
+            width:60%;
+        }
+        #items>div>div:last-child{
+            width:20%;   
+        }
+        #items>div>div:last-child>img{
+            width:100%
+        }
+        #price_summary{
+            width:40%;
+            display: block;
+        }
+        #price_summary>input{
+            width:100%;
+            border: 1px solid grey;
+            border-radius: 5px;
+            color:black;   
+            line-height: 14px; 
+            height:40px;   
+            padding-left: 20px;
+            margin-top:20px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        #price_summary>p{
+            color:black;
+            background-color: rgb(246, 242, 242);
+            height:40px;   
+            padding-left: 20px;
+            padding-top:10px;
+        }
+    
+        #details{
+            display: flex;
+            justify-content: space-between;
+        }
+        #details>div:first-child{
+            text-align: left;
+            padding-left: 20px;
+        }
+        #details>div:last-child{
+            text-align: right;
+            padding-right: 20px;
+        }
+        #summary>p{
+            height:40px;   
+            padding-left: 20px;
+            padding-top:10px;
+        }
+        #ctotal{
+            display:flex;
+            justify-content: space-between;
+        }
+        #ctotal>div:first-child{
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        #ctotal>div:first-child>p{
+            margin:0px;
+        }
+        #ctotal>div:last-child{
+            display: flex;
+            padding-right: 20px;
+            background-color: #42a2a2;
+            width:60%;
+            justify-content: center;
+            align-items:center;
+            border-radius: 5px;
+        }
+        #ctotal>div:last-child>a{
+            text-decoration: none;
+            color:black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="top_face">
+        <div>
+            <a href=""><img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"/></a>
+        </div>
+    </div>
+    <div id="parentdiv">
+        <div id="lower_face">
+            <div id="bag">
+                <p>My Bag<span id="total_items"> 3 </span>item(s)</p>
+            </div>
+            <div id="e_saving">
+                <div>
+                    <p>You get a <span>FREE</span> delivery on this Order</p>
+                </div>
+                <div>
+                    <p>Save extra <span id="t_total">₹150</span> with TriBe</p>
+                </div>
+            </div>
+            <div id="cart">
+                <div id="items">
+                    <!-- Append Here -->
+                    <!-- <div>
+                        <div>
+                            <p>Men's Black Kyuubi Mode Graphic Printed Oversized T-Shirt</p>
+                            <p><span>₹699</span><span>₹1499</span></p>
+                            <p>You saved<span>800</span></p>
+                            <button>+</button>
+                            <span>quantity</span>
+                            <button>-</button>
+                            <button>Remove</button>
+                        </div>
+                        <div>
+                            <img src="./Images/L/img1.webp">
+                        </div>
+                    </div> -->
+                </div>
+                <div id="price_summary">
+                    <input placeholder="Enter Coupon Code" type="text" id="iCoupon"/>
+                    <button style="display:block;margin:auto" onclick="submit()">Submit</button>
+                    <p>Price Summary</p>
+                    <div id="summary">
+                        <div id="details">
+                            <div>
+                                <p>Total MRP (Incl. of taxes)</p>
+                                <p>Shipping Charges</p>
+                                <p>Bag Discount</p>
+                                <p>Coupon Code Discount</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div>
+                                <p id="Total_MRP">0</p>
+                                <p id="Shipping_Charges"></p>
+                                <p id="Bag_Discount">0</p>
+                                <p id="Coupon_code">0</p>
+                                <p id="Subtotal">0</p>
+                            </div>
+                        </div>
+                        <p>You are saving <span id="R_saving">1200</span>on this order</p>
+                        <div id="ctotal">
+                            <div>
+                                <p>Total Payment</p>
+                                <p id="Total_Payment"><!-- Add Total Here--></p>
+                            </div>
+                            <div>
+                                <a href="payment.html">Payment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    display(cart);
+
+    function display(cart){
+        document.querySelector("#items").innerText="";
+        
+        cart.map(function(e,i){
+            var div=document.createElement("div");
+            var div1=document.createElement("div");
+
+            var p1=document.createElement("p");
+            p1.innerText=e.Desc;
+
+            var p2=document.createElement("p");
+            var span1=document.createElement("span");
+            span1.innerText=e.fprice;
+
+            var span2=document.createElement("span");
+            span2.innerText=e.fcprice;
+
+            p2.append(span1," ",span2);
+
+            var p3=document.createElement("p");
+            var span3= document.createElement("span");
+            span3.innerText=e.fcprice-e.fprice;
+
+            p3.append("You saved ",span3);
+
+            var btn1=document.createElement("button");
+            btn1.innerText="+";
+            btn1.addEventListener("click",function(){
+                inc_qua(e,i);
+            })
+
+            var span4= document.createElement("span");
+            span4.innerText=e.quantity;
+
+            var btn2=document.createElement("button");
+            btn2.innerText="-";
+            btn2.addEventListener("click",function(){
+                dec_qua(e,i);
+            })
+
+            var btn3=document.createElement("button");
+            btn3.innerText="Remove";
+            btn3.addEventListener("click",function(){
+                rem_qua(e,i);
+            })
+
+            div1.append(p1,p2,p3,btn1,span4,btn2,btn3);
+
+
+            var div2=document.createElement("div");
+            var img=document.createElement("img");
+            img.setAttribute("src",e.img);
+            div2.append(img);
+
+            div.append(div1,div2);
+            document.querySelector("#items").append(div);
+
+        });
+        bill(cart);
+    }
+
+    function inc_qua(e,i){
+        cart[i].quantity++;
+        cart[i].fcprice=e.quantity*e.cprice;
+        cart[i].ftprice=e.quantity*e.tprice;
+        cart[i].fprice=e.quantity*e.price;
+        localStorage.setItem("cart",JSON.stringify(cart));
+        display(cart);
+    }
+
+    function dec_qua(e,i){
+        if(cart[i].quantity>1){
+        cart[i].quantity--;
+        cart[i].fcprice=e.quantity*e.cprice;
+        cart[i].ftprice=e.quantity*e.tprice;
+        cart[i].fprice=e.quantity*e.price;
+        localStorage.setItem("cart",JSON.stringify(cart));
+        }
+        else{
+            rem_qua(e,i);
+        }
+        display(cart);
+    }
+
+    function rem_qua(e,i){
+        cart=cart.filter(function(elem,index){
+            if(e!=elem){
+                return true;
+            }
+        })
+        display(cart);
+        localStorage.setItem("cart",JSON.stringify(cart));
+    }
+
+    function bill(cart){
+        var quantity=0;
+        var MRP=0;
+        var bDiscount=0;
+        var shipping=0;
+        var sTotal=0;
+        var cdiscount=0;
+        var ttotal=0;
+        cart.map(function(e,i){
+            quantity+=e.quantity;
+            MRP+=e.fcprice;
+            bDiscount+=(e.fcprice-e.price);
+            ttotal+=(-e.ftprice+e.price);
+        })
+        bDiscount=-1*bDiscount;
+        if(MRP>4000){
+            shipping=0;
+        }
+        else{
+            shipping=200;
+        }
+        if(document.querySelector("#iCoupon").value=="Flat100")
+        {
+            cdiscount=-100;
+        }
+        var stotal=shipping+MRP+bDiscount+cdiscount;
+
+        document.querySelector("#Total_Payment").innerText=stotal;
+        document.querySelector("#Subtotal").innerText=stotal;
+        document.querySelector("#Coupon_code").innerText=cdiscount;
+        document.querySelector("#Bag_Discount").innerText=bDiscount;
+        document.querySelector("#Shipping_Charges").innerText=shipping;
+        document.querySelector("#Total_MRP").innerText=MRP;   
+        document.querySelector("#R_saving").innerText=MRP-stotal;
+        document.querySelector("#t_total").innerText=ttotal;
+    }
+    function submit(){
+        bill(cart);
+    }
+
+
+
+
+</script>
