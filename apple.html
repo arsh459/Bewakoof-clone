@@ -167,6 +167,35 @@
        font-weight: bold;
     }
 
+    #headingBox {
+        display: flex;
+        justify-content: space-between;
+    }
+    #headingBox :nth-child(2){
+        display: flex;
+        width: 20%;
+        height: 45px;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+
+    #headingBox :nth-child(2) > input {
+        border-radius: 20px;
+        width: 60%;
+        height: 40px;
+    }
+    #searchingForcover {
+        background-color: rgb(139, 191, 236);
+        margin-bottom: 50px;
+        text-align: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+
 </style>
 <body>
     <!-- From here navbar section is starting -->
@@ -226,7 +255,14 @@
     </header>
     <!-- Till here it is navbar section-->
 
-    <h1>Apple Covers And Cases</h1>
+    
+    <div id="headingBox">
+        <div><h1>Apple Covers And Cases</h1></div>
+        <div>
+            <input id="searchForItem" type="text" placeholder="Search Here For Your Phone">
+            <button id="searchingForcover" onclick="search()"> <i class="fa-sharp fa-solid fa-magnifying-glass"></i> </button>
+        </div>
+    </div>
     <div id="Containers">
 
     </div>
@@ -327,6 +363,7 @@ var data = [
    display(data);
 
    function display(list) {
+    document.querySelector("#Containers").textContent = "";
         list.map(function(elem) {
             var div = document.createElement("div");
             div.setAttribute("id","childDiv");
@@ -364,14 +401,28 @@ var data = [
             box.append(priceBox,rating)
             div.append(image,title,desc,box);
             document.querySelector("#Containers").append(div);
-        })
-        document.querySelector("h1").append("(" + data.length  +")");
+        }) 
+        
+        document.querySelector("h1").textContent = document.querySelector("title").textContent + "(" + list.length  +")";
         // console.log(data);
     }
+
     var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     function addToCart(item) {
         cartItems.push(item);
         localStorage.setItem("cart",JSON.stringify(cartItems));
+    }
+
+    
+    function search() {
+        var searchForItem = document.getElementById("searchForItem").value;
+        var relatedItem = [];
+        data.filter(function(elem) {
+            if((elem.title).toLowerCase() == searchForItem.toLowerCase()) {
+                relatedItem.push(elem);
+            }
+        })
+        display(relatedItem);
     }
 </script>
 
