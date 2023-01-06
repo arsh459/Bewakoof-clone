@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #first{
+            
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            height: 100%;
+            
+        }
+        .up{
+            
+            height: 50vh;
+            width: 20%;
+            
+         
+        }
+        .up>div>img{
+          width: 50%;
+          height:90%;
+        
+          
+        }
+        .up>div{
+            display: grid;
+            justify-items: center;
+           margin-top: 20px;
+            
+        }
+        img+div{
+            display: grid;
+            justify-items: center;
+        }
+        button{
+            padding:10px;
+            width: 85%;
+            font-size: larger;
+            border-radius: 7px;
+            border: 2px solid steelblue;
+            color: cornflowerblue;
+        }
+        #second{
+            width: 35%;
+            height: 50vh;
+        }
+        #second>div{
+            width: 100%;
+           
+        }
+        #bot{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 20px 20px 20p 20px ;
+            gap: 15px;
+        }
+        #bot>div{
+            
+            height: 30px;
+        }
+        p{
+            text-align: center;
+            margin: 20px;
+        }
+        a{
+            color: rgb(59, 130, 212);
+        }
+        
+        
+    </style>
+</head>
+<body>
+      <div>
+        
+            <div>
+                <img style="margin-left: 70px; width:15%;"  src="./cart-image/ic-desktop-normal-bwkf-logo.svg" alt="logo">
+                <hr>
+            </div>
+            <div id="first">
+               <div class="up">
+                <div>
+                <img src="./cart-image/bag.png" alt="">
+                </div>
+                <div>
+                <h3 style="margin-top: -15px;">Nothing in the bag</h3>
+                <button>Continue Shoping</button>
+                <hr>
+                </div>
+               </div>
+               <div id="second">
+                <div>
+                <hr>
+                  <p style="font-size: larger;"> You could try one of these categories:</p>
+                  <div id="bot">
+                       <div>
+                        Men
+                       </div>
+                       <div>
+                       <a href="men.html">Top Wear</a>
+                       </div>
+                       <div>
+                        <a href="men.html">Bottomwear</a>
+                       </div>
+                       <div></div>
+                       <div>
+
+                        <a href="men.html">Footwear</a>
+                       </div>
+                       <div>
+                        <a href="men.html">Bestseller</a>
+                       </div>
+                       
+                       <div>
+                        Women
+                       </div>
+                       <div><a href="">Topwear</a></div>
+                       <div><a href="">Bottomwear</a></div>
+                       <div></div>
+                       <div><a href="">Bestseller</a></div>
+                       
+                       <div></div>
+                       
+
+
+                  </div>
+                </div>
+               </div>
+            </div>
+        
+      </div>
+</body>
+</html>
