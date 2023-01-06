@@ -239,7 +239,7 @@ var data=[
 document.querySelector("#size").addEventListener("change",filterBySize);
 document.querySelector("#rating").addEventListener("change",filterByRating);
 document.querySelector("#Fbbrand").addEventListener("change",filterByBrand);
-// document.querySelector("#design").addEventListener("change",filterByDesign);
+//  document.querySelector("#design").addEventListener("change",filterByDesign);
 document.querySelector("#sbp").addEventListener("change",sortByPrice);
 
 function display(data){
@@ -328,6 +328,8 @@ function filterByBrand(){
     })
     display(result);
 }
+
+
 
 function sortByPrice(){
     event.preventDefault();
