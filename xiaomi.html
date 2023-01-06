@@ -195,6 +195,9 @@
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
+    #searchForItem {
+        text-align: center;
+    } 
     
 
 </style>
@@ -447,6 +450,7 @@ var data = [
             }
         })
         display(relatedItem);
+        document.getElementById("searchForItem").value = "";
     }
 </script>
 </html>
