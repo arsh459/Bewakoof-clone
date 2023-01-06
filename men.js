@@ -370,8 +370,23 @@ function sortByPrice(){
         display(data);
     }
 }
-
+var cart=JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(e,i){
-    alert("added to cart")
+    var result=cart.filter(function(elem,index){
+        if(e.identity==elem.identity){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    if(result.length==0){
+        e.quantity=1;
+        e.fcprice=e.quantity*e.cprice;
+        e.ftprice=e.quantity*e.tprice;
+        e.fprice=e.quantity*e.price;
+        cart.push(e);
+        localStorage.setItem("cart",JSON.stringify(cart));
+    }
 }
 
