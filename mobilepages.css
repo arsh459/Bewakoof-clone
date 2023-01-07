@@ -1,0 +1,335 @@
+#whole {
+    font-family: 'Chivo Mono', monospace;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* For Covers's Html page css is here (below)*/
+
+#parent {
+    width: 70%;
+    background-color: rgb(244, 241, 241);
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+ }
+
+ #div2 {
+     display: flex;
+     align-items: center;
+ }
+ #sideImage {
+     width: 35%;
+     height: 400px;
+     margin-left: 40px;
+     margin-right: 60px;
+     margin-bottom: 55px;
+     border-radius: 50px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ #sideImage > img {
+     border-radius: 20px;
+     width: 100%;
+     height: 100%;
+ }
+ p {
+     font-size: large;
+ }
+ 
+ #brands {
+     background-color:rgb(236, 234, 234);
+     width: 60%;
+     display: grid;
+     margin-left: 60px;
+     grid-template-columns: repeat(4,1fr);
+     gap: 20px;
+     margin-bottom: 60px;
+     border-radius: 10px;
+     padding: 30px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ #brands > div {
+     width: 60%;
+     height: 60%;
+     text-align: center;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     border-radius: 30px;
+ }
+ #brands > div > img {
+     width: 100px;
+     height: 100px;
+     border-radius: 30px;
+ }
+ #brands > div > p {
+     color: rgb(30, 100, 161);
+ }
+
+ /* For Covers's Html page css is here (above)*/
+
+
+ /* For header the css is here (below) */
+
+.mainheader{
+      
+      position: sticky;
+      top: 0;
+      
+      
+  }
+   /* upper header */
+  .upheader{
+      height: 23px;
+      background-color: rgb(222, 222, 222);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      padding: 2px 30px 2px 30px;
+      margin-top: -10px;
+  }
+  .ulist,.lefthead,.righthead{
+      
+      display: flex;
+      align-items: center;
+      
+      
+  }
+  .list{
+      list-style: none;
+      padding: 0 10px;
+      align-items: center;
+      
+     
+  }
+  #fontmob{
+      font-size: 20px;
+      align-items: center;
+  }
+  .listlogo{
+      margin-left: -5px;
+      list-style: none;
+  }
+  /* mid header */
+
+  .midheader{
+      height: 45px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      padding: 5px 80px 5px 80px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+  }
+  .productpage>img{
+      width: 150px;
+  }
+  #searchbar{
+      width: 270px;
+      background-color: rgb(222, 222, 222);
+      height: 35px;
+      border: none;
+      font-size: 12px;
+      border-radius: 4px;
+      padding: 5px;
+  }
+  .productpage{
+      text-decoration: none;
+      color: black;
+  }
+  .productpagett{
+      text-decoration: none;
+      color: black;
+
+  }
+  .productpagett:hover {
+     
+      text-decoration: underline;
+      
+      color: black;
+      
+  }
+  /* LOWER HEADER */
+
+  .lowheader{
+      
+      display: block;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px 250px;
+      font-size: 18px;
+      height: 45px;
+      background-color: white;
+      
+  }
+
+  /* For header the css is here (above) */
+
+
+/* For containers of different brands of mobile covers css is here (below) */
+
+
+  #Containers  {
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+   margin-bottom: 40px;
+}
+#childDiv {
+   width: 100%;
+   border-radius: 20px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   text-align: left;
+   margin: auto;
+}
+#childDiv:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#childDiv > img {
+   width: 100%;
+}
+#div2nd{
+margin-left: 15px;
+}
+
+
+
+#box_of_rating_and_price {
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+align-items: center;
+}
+
+#box_of_rating_and_price > :nth-child(2) {
+width: 15%;
+}
+
+#description {
+margin-top:-10px;
+font-size: 14px;
+color:grey;
+}
+
+#priceBox {
+   display: flex;
+   justify-content: left;
+   width: 20%;
+   height: 30px;
+   font-size: 20px;
+   align-items: center;
+}
+
+
+#div2nd :last-child {
+font-size: 20px;
+font-weight: bold;
+margin-top: 5px;
+}
+
+
+#priceBox :nth-child(2){
+   text-decoration: line-through;
+   color: grey;
+   font-size:15px;
+   font-weight: bold;
+   margin-left: 10px;
+   align-items: center;
+   margin-top: 18px;
+}
+#headingBox {
+    display: flex;
+    justify-content: space-between;
+}
+#headingBox :nth-child(2){
+    display: flex;
+    width: 20%;
+    height: 45px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#headingBox :nth-child(2) > input {
+    border-radius: 20px;
+    width: 60%;
+    height: 40px;
+}
+#searchingForcover {
+    background-color: rgb(139, 191, 236);
+    margin-bottom: 50px;
+    text-align: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 40px;
+}
+#searchingForcover :hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#searchForItem {
+    text-align: center;
+} 
+
+#brandTitle {
+    font-weight: bold;
+}
+
+/* For containers of different brands of mobile covers css is here (above) */
+
+
+/* For footer the css is here (below) */
+
+.blackbody{
+        height: 2200px;
+        width: 100%;
+        background-color:rgba(21, 20, 20, 0.965);
+     }
+     .blackbodydata{
+        width: 83%;
+        
+        margin: auto;
+        color: aliceblue;
+     }
+     
+    .blackbodydata>div>img{
+
+        margin-top: 40px;
+        width: 100%;
+     }
+     .secondrowimg{
+
+     margin-top: -45px;
+      width: 100%;
+     }
+     .yellowhr{
+        height: 1px;
+        color: yellow;
+        
+     }
+     .hrr{
+        margin-top: 20px;
+        border: 1px solid whitesmoke;
+        width: 100%;
+     }
+     .ptop{
+        margin-top: 30px;
+        font-size: 22px;
+     }
+     .pbot{
+        margin-top: 30px;
+        font-size: 20px;
+        line-height: 26px;
+     }
+
+     /* For footer the css is here (above) */
+
+
+     /* For media quarries the css is here for all pages of mobile accessories */
+
+     
