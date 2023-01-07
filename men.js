@@ -374,10 +374,8 @@ var cart=JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(e,i){
     var result=cart.filter(function(elem,index){
         if(e.identity==elem.identity){
+            alert("Item Aleady in Cart");
             return true;
-        }
-        else{
-            return false;
         }
     })
     if(result.length==0){
