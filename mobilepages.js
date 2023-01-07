@@ -33,7 +33,7 @@ function display(list) {
             box.setAttribute("id","box_of_rating_and_price");
 
             var tprice = document.createElement("p");
-            tprice.textContent = elem.tprice + " For TriBe Members"
+            tprice.textContent = "₹" + elem.tprice + " For TriBe Members"
             
             var rating = document.createElement("div");
             rating.textContent =  "* " + elem.rating;
