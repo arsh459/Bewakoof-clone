@@ -45,11 +45,23 @@
             margin-top: 15px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
-        #coupon>p{
+        #coupon>input{
             border-radius: 5px;
             padding: 10px;
+            margin:2px;
+            width:40%;
             background-color:#42a2a23a ;
+            border:none;
+            
+            
+        }
+        #coupon>button{
+            border-radius: 5px;
+            padding: 10px;
             margin: 2px;
+            width:40%;
+            border:none;
+            height:40px;
             
         }
         #coupon{
@@ -146,24 +158,32 @@
             color: red;
             margin:1% 1% 1% 5%;
         }
-        
+        .img1{
+            width:100%
+        }
+        #cartitems{
+            margin-top:20px;
+        }
+        #leftmarginprice>div:last-child{
+            text-decoration: line-through;
+        }
     </Style>
 </head>
 <body>
      <div>
         
         <div>
-            <img style="margin-left: 70px; width: 15%;"  src="./cart-image/ic-desktop-normal-bwkf-logo.svg" alt="logo">
+            <img onclick="window.location.href='index.html'" style="margin-left: 70px; width: 15%;"  src="./cart-image/ic-desktop-normal-bwkf-logo.svg" alt="logo">
             <hr>
-            <h3 >My Bag=</h3>
+            <h3 id="My_Bag">My Bag=</h3>
             <div id="main">
               <div>
                     <div id="heading">
-                        <div ><img style="width:15%; margin: 15px;"   src="https://images.bewakoof.com/web/Red-truck.png" alt=""></div>
-                        <div><p style="margin-left:-150px;">Yay! You get FREE delivery on this order</p></div>
+                        <div><img style="width:15%; margin: 15px;" src="https://images.bewakoof.com/web/Red-truck.png" alt=""></div>
+                        <div><p style="margin-left:-150px;">You get FREE delivery on this order</p></div>
                     </div>
-                    <div>
-                        <div id="cartitems"> 
+                    <div id="items">
+                        <!-- <div id="cartitems"> 
                             <div id="incartitems">
                                 <div class="leftmargin">
                                     Men's Black Kyuubi Mode Graphic Printed Oversized T-Shirt
@@ -178,73 +198,73 @@
                                 </div>
                                 
                                 <div class="leftmargin" style="color: green;">You saved 900 </div>
-                                <div id="quan"> 
+                                <div id="quan">
                                     <div class="value">
                                         <div>Size:</div>
                                         <select>
                                           <option value="">size</option>
-                                          <option value="">S</option>
+                                           <option value="">S</option>
                                           <option value="">M</option>
                                           <option value="">L</option>
-                                          <option value="s">XL</option>
+                                          <option value="">XL</option>
                                           <option value="">XXL</option>
-
                                         </select>
                                     </div>
                                     
                                     <div class="value">
                                         <div>Qty:</div>
                                         <select>
-                                          <option value="">1</option>
-                                          <option value="s">2</option>
-                                          <option value="">3</option>
-                                          <option value="">4</option>
-                                          <option value="s">5</option>
-                                          <option value="">6</option>
-                                          <option value="">7</option>
-                                          <option value="s">8</option>
-                                          <option value="">9</option>
-                                          <option value="">10</option>
-                                          
+                                          <option value="1">1</option>
+                                          <option value="2">2</option>
+                                          <option value="3">3</option>
+                                          <option value="4">4</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                          <option value="7">7</option>
+                                          <option value="8">8</option>
+                                          <option value="9">9</option>
+                                          <option value="10">10</option>
                                         </select>
                                     </div> 
                                    
                                 </div>
                                 <div id="hurry">Hurry! Only 15 left!</div>
                             </div>
-                            <div id="img"> img</div>
+                            <div id="img">
+                                <img class="img1" src="">
+                            </div>
                            
                         </div>
                         <div id="remove">
                             <div>Remove</div>
                             <div>Move To Wishlist</div>
-                        </div>
+                        </div> -->
                     </div>
               </div>
               <div>
                <div id="right">
                  <div id="save">
-                    <p > Save Extra ₹60 with tri</p>
+                    <p> Save Extra ₹60 with tribe Membership</p>
                    
                      
                  </div>
-                 <div class="firstpurchage">
-                    <p>Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200</p>
+                 <div onclick='p1submit()' class="firstpurchage">
+                    <p>Get Rs.200 instant discount,Coupon code -NEW200</p>
                  </div>
-                 <div>
-                    <p class="firstpurchage">Whistles! Get extra 20% Cashback on prepaid orders above Rs.499.
-                         Coupon code - NEW20. Applicable for new customers only!</p>
+                 <div onclick='p2submit()' class="firstpurchage">
+                    <p>Get extra Rs.20 Cashback,Coupon code - NEW20.</p>
                  </div>
                  <div id="totalprice">
                     <div id="coupon">
-                      <p>Have a Coupon / Referral / Gift Card ?</p>
+                      <!-- <p>Have a Coupon / Referral / Gift Card ?</p> -->
+                      <input placeholder="Promo Code" id="iCoupon"><button onclick="submit()">Submit</button>
                     </div>
                     <div id="pricesum">
                         <div>
                             <div id="summary">
                                <h4>Price Summary</h4> 
                             </div>
-                            <div>
+                            <div id="Price_Summary">
                                 <div id="price">
                                    <div>Total MRP (Incl. of taxes) </div>
                                    <div>₹000</div> 
@@ -257,6 +277,10 @@
                                  </div>
                                  <div id="price">
                                     <div>Bag Discount </div>
+                                    <div>₹000</div> 
+                                 </div>
+                                 <div id="price">
+                                    <div> Coupon Discount</div>
                                     <div>₹000</div> 
                                  </div>
                                  <div id="price">
@@ -285,4 +309,4 @@
      </div>
 </body>
 </html>
-<script src="./cart2.js"></script>
+<script src="cart2.js"></script>
