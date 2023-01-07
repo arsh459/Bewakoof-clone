@@ -52,7 +52,11 @@ function display(list) {
             document.querySelector("#Containers").append(div);
         }) 
         
-        document.querySelector("h1").textContent = document.querySelector("title").textContent + "(" + list.length  +")";
+        if(list.length === 0) {
+            document.querySelector("h1").textContent = "Sorry ! Not Available For Now";
+        }else {
+            document.querySelector("h1").textContent = document.querySelector("title").textContent + "(" + list.length  +")";
+        }
         // console.log(data);
     }
 
