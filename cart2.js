@@ -233,6 +233,7 @@ function bill(cart)
         document.querySelector("#save>p").textContent="Save Extra ₹"+ttotal+" with tribe Membership";
         document.querySelector("#heading>div:last-child>p").textContent="You get ₹"+shipping+" delivery charges on this order";
         document.querySelector("#My_Bag").textContent="My Bag contains "+quantity+" items";
+        localStorage.setItem("lstotal",stotal);
 }
 function submit(){
     bill(cart);

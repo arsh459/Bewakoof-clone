@@ -180,26 +180,29 @@
             </div>
             <p>This transaction you make is totally secure. We don't save your CVV number.</p>
             <div>
-             <button onclick="endpurchase()">Pay 6999</button>
+             <button id="final_payment" onclick="endpurchase()">Pay 6999</button>
             </div>
            </div>
        </div>
-
-
-
-
     </div>
 </body>
 </html>
 <script>
-    function endpurchase(){
-        
-    if((document.querySelector("#Card_No").value!="") && (document.querySelector("#month").value!="") && (document.querySelector("#cvv").value!="") && (document.querySelector("#name").value!="")){
-        console.log("ok");
-        window.location.href="Thanks.html";
+    document.querySelector("#final_payment").textContent="Pay ₹"+(localStorage.getItem("lstotal") || 0);
+    var s=JSON.parse(localStorage.getItem("store")) || [];
+    if(s.length==0){
+        window.location.replace('login.html')
     }
     else{
-        console.log("not OK");
+        document.querySelector("#sign>p").textContent=s[s.length-1].name
+    }
+    function endpurchase(){     
+    if((document.querySelector("#Card_No").value!="") && (document.querySelector("#month").value!="") && (document.querySelector("#cvv").value!="") && (document.querySelector("#name").value!="")){
+        window.location.href="Thanks.html";
+        localStorage.setItem("cart",JSON.stringify([]));
+        
+    }
+    else{
         alert("Fill All Required Details")
     }
 }
