@@ -1,5 +1,21 @@
 // Data Showing In Web Page By Creating Html Elements
-
+var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    function checkcart(){
+        if(cart.length==0){
+            document.querySelector("#Cartlink").href="cart.html"
+        }
+        else{
+            document.querySelector("#Cartlink").href="cart2.html"
+        }
+    }
+    var store=JSON.parse(localStorage.getItem("store")) || [];
+    if(store.length==0)
+    {
+        document.querySelector("#loginname").textContent="Login";
+    }
+    else{
+        document.querySelector("#loginname").textContent=store[store.length-1].name;
+    }
 display(data);
 function display(list) {
     document.querySelector("#Containers").textContent = "";
