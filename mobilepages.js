@@ -88,6 +88,7 @@ function display(list) {
     function addToCart(e,i){
     var result=cart.filter(function(elem,index){
         if(e.identity==elem.identity){
+            alert("Item Already in Cart");
             return true;
         }
         else{
