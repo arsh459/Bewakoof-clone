@@ -120,7 +120,7 @@
 <body>
     <div id="pairent">
         <div id="header">
-            <div> <img src="cart-image/ic-desktop-normal-bwkf-logo.svg" alt=""></div>
+            <div> <img src="cart-image/ic-desktop-normal-bwkf-logo.svg" alt="" onclick="window.location.href='index.html'"></div>
            
             <div id="sign">
                 <h4>Sign as</h4>
@@ -194,7 +194,7 @@
         window.location.replace('login.html')
     }
     else{
-        document.querySelector("#sign>p").textContent=s[s.length-1].name
+        document.querySelector("#sign>p").textContent=s[s.length-1].email;
     }
     function endpurchase(){     
     if((document.querySelector("#Card_No").value!="") && (document.querySelector("#month").value!="") && (document.querySelector("#cvv").value!="") && (document.querySelector("#name").value!="")){

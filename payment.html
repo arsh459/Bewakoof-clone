@@ -151,7 +151,7 @@
 <body>
     <div id="top_face">
         <div>
-            <a href=""><img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"/></a>
+            <a href="index.html"><img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"/></a>
         </div>
     </div>
     <div id="nparent">
@@ -280,7 +280,6 @@ function remove(e,i){
     function Save(){
         event.preventDefault()
         var o={
-            
             Country:document.querySelector("#Country").value,
             Name:document.querySelector("#Name").value,
             Zipcode:document.querySelector("#Zipcode").value,
@@ -298,7 +297,7 @@ function remove(e,i){
             document.querySelector("#Country").style.borderColor="Grey";
         }
         if(o.Name==""){
-            document.querySelector("Name").style.borderColor="Red";
+            document.querySelector("#Name").style.borderColor="Red";
         }
         else{
             document.querySelector("#Name").style.borderColor="Grey";
@@ -341,11 +340,13 @@ function remove(e,i){
         }
         if((o.Country!="" && o.Name!="" && o.Zipcode!="" && o.Mobile!="" && o.City!="" && o.Flat!="" && o.State!="" && o.Area!="")){
             address.push(o);
+            console.log("ok");
             localStorage.setItem("address",JSON.stringify(address));
             display(address);   
         }
         else{
             alert("Fill all required data")
+            console.log("NOt OK");
         }
     }
     function Cancel(){

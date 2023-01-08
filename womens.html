@@ -12,11 +12,8 @@
     <style>
         /* Main header */
         .mainheader{
-           
            position: sticky;
-           top: 0;
-           
-           
+           top: 0;   
        }
         /* upper header */
        .upheader{
@@ -291,11 +288,9 @@ font-family: 'Poppins', sans-serif;
                 </div>
                     <ul class="ulist">
                         <li class="listlogo">|</li>
-                        <li class="list"><a class="productpage" href="login.html">Login</a></li>
+                        <li class="list"><a id="loginname" class="productpage" href="login.html">Login</a></li>
                         <li class="list"><a class="productpage" href=""><i class="fa-regular fa-heart"></a></i></li>
-                        
-                        <li class="list"><a class="productpage" href="cart2.html"><i class="fa-solid fa-bag-shopping"></a></i></li>
-                        
+                        <li class="list"><a class="productpage" id="Cartlink" href="" onclick="checkcart()"><i class="fa-solid fa-bag-shopping"></a></i></li>
                     </ul>
                 </div>
             </header>
@@ -309,7 +304,7 @@ font-family: 'Poppins', sans-serif;
             </header>
         </header>
     <!-- <h1 id="main_Tag">Women Clothing</h1> -->
-    <h1 id="main_Tag">Women Clothing <span>(4471)</span></h1>
+    <h1 id="main_Tag">Women Clothing <span id="totalitems">(4471)</span></h1>
     <div id="parent">
         
         <div id="filter">
