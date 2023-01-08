@@ -9,7 +9,7 @@
     }
     var quan=0;
     cart.map(function(e,i){
-        quan+=e.quantity;
+        quan+=Number(e.quantity);
     })
     document.querySelector("#Sup").textContent=quan;
     var store=JSON.parse(localStorage.getItem("store")) || [];
