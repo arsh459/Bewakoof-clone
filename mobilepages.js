@@ -119,3 +119,29 @@ function display(list) {
         display(relatedItem);
         document.getElementById("searchForItem").value = "";
     }
+
+
+    // cart count 
+
+    var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    function checkcart(){
+        if(cart.length==0){
+            document.querySelector("#Cartlink").href="cart.html"
+        }
+        else{
+            document.querySelector("#Cartlink").href="cart2.html"
+        }
+    }
+    var quan=0;
+    cart.map(function(e,i){
+        quan+=Number(e.quantity);
+    })
+    document.querySelector("#Sup").textContent=quan;
+    var store=JSON.parse(localStorage.getItem("store")) || [];
+    if(store.length==0)
+    {
+        document.querySelector("#loginname").textContent="Login";
+    }
+    else{
+        document.querySelector("#loginname").textContent=store[store.length-1].name;
+    }
