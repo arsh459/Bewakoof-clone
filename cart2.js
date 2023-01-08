@@ -237,6 +237,9 @@ function bill(cart)
 function submit(){
     bill(cart);
 }
+function goToAdd(){
+    window.location.href="payment.html"
+}
 
 
 

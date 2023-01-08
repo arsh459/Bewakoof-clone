@@ -90,6 +90,7 @@
     input{
         width: 99%;
         height: 60px;
+        font-size:20px;
         text-align: center;
     }
     #check{
@@ -164,14 +165,14 @@
            </div>
            <div id="option2">
             <div>
-                <input type="text" placeholder="Card No">
+                <input id="Card_No" type="number" placeholder="Card No">
             </div>
             <div id="cardno">
-             <input type="number" placeholder="Valid Through(MM/Y)">
-             <input type="text" placeholder="CVV">
+             <input id="month" type="month" placeholder="Valid Through(MM/Y)">
+             <input id="cvv" type="number" placeholder="CVV">
             </div>
             <div>
-                <input type="text" placeholder="Enter full Name">
+                <input id="name" type="text" placeholder="Enter full Name">
             </div>
             <div id="check">
                 <input type="checkbox" name="" id="">
@@ -179,7 +180,7 @@
             </div>
             <p>This transaction you make is totally secure. We don't save your CVV number.</p>
             <div>
-             <button>Pay 6999</button>
+             <button onclick="endpurchase()">Pay 6999</button>
             </div>
            </div>
        </div>
@@ -190,3 +191,16 @@
     </div>
 </body>
 </html>
+<script>
+    function endpurchase(){
+        
+    if((document.querySelector("#Card_No").value!="") && (document.querySelector("#month").value!="") && (document.querySelector("#cvv").value!="") && (document.querySelector("#name").value!="")){
+        console.log("ok");
+        window.location.href="Thanks.html";
+    }
+    else{
+        console.log("not OK");
+        alert("Fill All Required Details")
+    }
+}
+</script>
