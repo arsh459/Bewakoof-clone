@@ -281,7 +281,9 @@ function display(data){
 
         div.append(img,p1,p2,p3,p4);
         document.querySelector("#image").append(div);
+        document.querySelector("#totalitems").textContent="("+(i+1)+")";
     })
+
 }
 
 function filterBySize(){

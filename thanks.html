@@ -100,7 +100,7 @@
 <body>
       <div id="parent">
         <div id="header">
-            <div> <img src="cart-image/ic-desktop-normal-bwkf-logo.svg" alt=""></div>
+            <div> <img src="cart-image/ic-desktop-normal-bwkf-logo.svg" alt="" onclick="window.location.href='index.html'"></div>
            
             <div id="sign">
                 <h4>Sign as</h4>
@@ -126,3 +126,8 @@
           
 </body>
 </html>
+<script>
+    var s=JSON.parse(localStorage.getItem("store")) 
+    document.querySelector("#sign>p").textContent=s[s.length-1].email;
+    
+</script>
