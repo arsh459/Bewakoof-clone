@@ -1,4 +1,4 @@
-var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    var cart=JSON.parse(localStorage.getItem("cart")) || [];
     function checkcart(){
         if(cart.length==0){
             document.querySelector("#Cartlink").href="cart.html"
@@ -7,6 +7,11 @@ var cart=JSON.parse(localStorage.getItem("cart")) || [];
             document.querySelector("#Cartlink").href="cart2.html"
         }
     }
+    var quan=0;
+    cart.map(function(e,i){
+        quan+=e.quantity;
+    })
+    document.querySelector("#Sup").textContent=quan;
     var store=JSON.parse(localStorage.getItem("store")) || [];
     if(store.length==0)
     {
@@ -273,9 +278,6 @@ var data=[
         identity:"R23"
     },
     ];
-    for(var i=0;i<data.length;i++){
-        data[i].identity=i+1;
-    }
     display(data);
 document.querySelector("#size").addEventListener("change",filterBySize);
 document.querySelector("#rating").addEventListener("change",filterByRating);
