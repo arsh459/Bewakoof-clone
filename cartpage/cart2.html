@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        #main{
+           width:80%;
+           height:95vh;
+           display: grid;
+           border:  2px solid yellow;
+           margin-left: 10%;
+           margin-bottom: 10%;
+           grid-template-columns: 60% 40%;
+           gap: 20px;
+        
+        }
+        h3{
+            margin:2% 0 2% 10%;
+        }
+        #main>div{
+            background-color: blue;
+        }
+        #heading{
+             display: flex;
+            background-color: rgb(245, 228, 208);
+             
+        }
+        #right>div+p{
+        background-color: yellow;
+        border-radius: 5px;
+        border: 2px solid red;
+        padding:20px;
+        margin-top: -5px;
+        }
+
+    </Style>
+</head>
+<body>
+     <div>
+        
+        <div>
+            <img style="margin-left: 70px; width: 15%;"  src="./cart-image/ic-desktop-normal-bwkf-logo.svg" alt="logo">
+            <hr>
+            <h3 >My Bag=</h3>
+            <div id="main">
+              <div>
+                    <div id="heading">
+                        <div ><img style="width:15%; margin: 15px;"   src="https://images.bewakoof.com/web/Red-truck.png" alt=""></div>
+                        <div><p style="margin-left:-150px;">Yay! You get FREE delivery on this order</p></div>
+                    </div>
+                    <div>
+
+                        cart item
+                    </div>
+              </div>
+              <div>
+               <div id="right">
+                 <div>
+                    <p> Save Extra ₹60 with tri</p>
+                   
+                     
+                 </div>
+                 <div>
+                    <p>Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200</p>
+                 </div>
+               </div>
+            </div>
+        </div>
+        </div>
+     </div>
+</body>
+</html>

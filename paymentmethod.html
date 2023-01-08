@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    
+    #header{
+        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    #header>div>img{
+    
+        margin-left: 100px;
+        width: 55%;
+    }
+    #sign{
+    
+       margin-top: -25px;
+        height: 10%;
+        margin-right:70px;
+    }
+    #sign>h4,#sign>p{
+        margin-bottom: -15px;
+    }
+    #footer{
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        border: 1px solid black;
+    }
+    #footer>div{
+        background-color: rgba(9, 255, 0, 0.411);
+
+    }
+    #card{
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .img{
+        width: 4%;
+        height: 3%;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+    .img1{
+        width: 6%;
+        height: 4%;
+        
+        margin-top: 12px;  
+    }
+    h3{
+        margin-left: 10px;
+    }
+    #option{
+        display: flex;
+        border: 1px solid black;
+        width: 80%;
+        margin: auto;
+    }
+    #option1{
+        width: 40%;
+    
+    }
+    #option2{
+        width: 60%;
+    }
+    .option1{
+        display: flex;
+        border: 1px solid black;
+    }
+    .option1>img{
+        width: 6%;
+        height: 4%;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+    #cardno{
+        display: flex;
+    }
+    #option2>div{
+        
+        border: 1px solid black;
+    }
+    input{
+        width: 99%;
+        height: 60px;
+        text-align: center;
+    }
+    #check{
+        display: flex;
+    }
+    #check>input{
+        width: 3%;
+
+        margin:-7px 15px 0 17px;
+
+    }
+    button{
+        width: 70%;
+        
+        height: 60px;
+        border-radius: 10px;
+        font-size: larger;
+        margin-left: 17%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+        background-color: rgba(255, 127, 155, 0.507);
+    
+    }
+    p{ text-align: center;}
+   </style>
+</head>
+<body>
+    <div id="pairent">
+        <div id="header">
+            <div> <img src="cart-image/ic-desktop-normal-bwkf-logo.svg" alt=""></div>
+           
+            <div id="sign">
+                <h4>Sign as</h4>
+                <p> pradeep kumar tripathi</p>
+            </div>
+        </div>
+        <hr style="margin-top:14px;">
+        <h2 style="margin-left:10%;">Chose you payment method</h2>
+       <div id="footer">
+          
+            <div id="card">
+                    <img  style="margin-right: 80px;" src="https://images.bewakoof.com/web/bank-card-fill-1645697857.svg" alt="img">
+                    <p>Debit/Credit Card</p>
+                    <img class="img1" style="size:1px;"  src="https://images.bewakoof.com/web/ic-visa-gray-payment-v1.jpg" alt="">
+                    <img  class="img" src="https://images.bewakoof.com/web/ic-master-card-payment-v1.jpg" alt="">
+                    <img  class="img1" src="https://images.bewakoof.com/web/ic-rupay-payment-v1.jpg" alt="">
+                    <img  class="img" src="https://images.bewakoof.com/web/ic-american-express-payment-v1.jpg" alt="">
+            </div>
+         
+       </div>
+       <div id="option">
+          <div id="option1"> 
+              <div class="option1">
+                 <img src="https://images.bewakoof.com/web/Group-1645705428.png" alt="">
+                 <h3> Wallet</h3>
+              </div>
+              <div class="option1">
+                <img src="https://images.bewakoof.com/web/upi-icon-1645705429.png" alt="">
+                <h3>UPI</h3>
+              </div>
+              <div class="option1">
+                <img src="https://images.bewakoof.com/web/nb-icon-1645705428.png" alt="">
+                <h3>Net Banking</h3>
+              </div>
+              <div class="option1">
+                <img src="https://images.bewakoof.com/web/cod-icon-1645705427.png" alt="">
+                <h3>Cash On Delivary</h3>
+              </div>
+              <div class="option1" style="height: 70px;">
+                
+              </div>
+           </div>
+           <div id="option2">
+            <div>
+                <input type="text" placeholder="Card No">
+            </div>
+            <div id="cardno">
+             <input type="number" placeholder="Valid Through(MM/Y)">
+             <input type="text" placeholder="CVV">
+            </div>
+            <div>
+                <input type="text" placeholder="Enter full Name">
+            </div>
+            <div id="check">
+                <input type="checkbox" name="" id="">
+                <p>Save Card Detail Latter</p>
+            </div>
+            <p>This transaction you make is totally secure. We don't save your CVV number.</p>
+            <div>
+             <button>Pay 6999</button>
+            </div>
+           </div>
+       </div>
+
+
+
+
+    </div>
+</body>
+</html>
