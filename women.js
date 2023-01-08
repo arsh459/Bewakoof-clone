@@ -8,6 +8,7 @@ var data=[
         tprice:539,
         rating:4,
         size:"XS"
+    
     },
     {
         Brand:"Bewakoof",
@@ -18,6 +19,7 @@ var data=[
         tprice:509,
         rating:4,
         size:"XS"
+       
     },
     {
         Brand:"Bewakoof",
