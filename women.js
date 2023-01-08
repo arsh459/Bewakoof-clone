@@ -273,9 +273,6 @@ var data=[
         identity:"R23"
     },
     ];
-    for(var i=0;i<data.length;i++){
-        data[i].identity=i+1;
-    }
     display(data);
 document.querySelector("#size").addEventListener("change",filterBySize);
 document.querySelector("#rating").addEventListener("change",filterByRating);
