@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Address</title>
     <style>
+        #top_face{
+            border-bottom: 1px solid grey;
+            margin-bottom:50px;
+        }
+        #top_face>div{
+            width:80%;
+            margin:auto;
+            margin-bottom: 5px;
+        }
         #parent{
-            border: 1px solid red;
             display: block;
             padding:auto;
-            width:50%;
+            width:100%;
             margin: auto;
         }
         #parent>div{
@@ -40,51 +48,312 @@
         #special>input{
             width:25%;
         }
-        
+        #typeA>button{
+            border:none;
+            border-radius: 5px;
+            margin:5px;
+            padding:5px;
+            font-size: 14px;
+        }
+        #submit{
+            display:flex;
+            justify-content: space-around;
+        }
+        #submit>button{
+            font-size: 20px;
+            background-color: #42a2a2;
+            border:none;
+            color:#ffffff;
+            border-radius: 5px;
+            width:30%;
+            height:48px;
+            margin:auto;
+        }
+        h1{
+            text-align: center;
+        } 
+        #Saved_Address{
+            width:40%;
+        }
+        #mparent{
+            width:40%;
+            border:1px solid grey;
+            border-radius: 15px;
+        }
+        #nparent{
+            display:flex;
+            justify-content: space-around;
+        }
+        #Saved_Address>div{
+            width:100%;
+            border:1px solid grey;
+            padding:10px;
+            border-radius: 10px;
+
+        }
+        #Saved_Address>div>div:nth-child(1){
+            width:80%;
+            display:flex;
+            margin:auto;
+            align-items: center;
+        }
+        #Saved_Address>div>div:nth-child(1)>div:first-child{
+            margin-right:20px;
+            font-size: 16px;
+        }
+        /* #Saved_Address>div>div:nth-child(1)>div:last-child{
+            margin-right:20px;
+            font-size: 16px;
+            width:60px;
+            padding:4px;
+            border:none;
+            background-color: #e8e5e5;
+            border-radius: 15px;
+            text-align: center;
+        } */
+        #Saved_Address>div>div:nth-child(2){
+            width:80%;
+            display:flex;
+            margin:auto;
+            align-items: center;
+            font-size: 16px;
+            margin-top:15px;
+        }
+        #Saved_Address>div>div:nth-child(3){
+            width:80%;
+            display:flex;
+            margin:auto;
+            align-items: center;
+            font-size: 16px;
+            margin-top:15px;
+        }
+        #Saved_Address>div>div:nth-child(4){
+            width:80%;
+            display:flex;
+            margin:auto;
+            align-items: center;
+            font-size: 16px;
+            margin-top:15px;
+            justify-content: space-evenly;
+        }
+        #Saved_Address>div>div:nth-child(4)>button{
+            color:#ffffff;
+            background-color: #42a2a2;
+            border-radius: 5px;
+            height:48px;
+            width:48%;
+            border:none;
+            font-size: 25px;
+        }
 
     </style>
 </head>
 <body>
-    <form>
-        <div id="parent">
-            <div>
-                <input type="'text" placeholder="Country">
-            </div>
-            <div>
-                <input type="'text" placeholder="Full Name">
-            </div>
-            <div>
-                <input type="'Number" placeholder="Mobile Number">
-            </div>
-            <div>
-                <input type="'text" placeholder="Pin Code/Postal Code/Zipcode">
-            </div>
-            <div id="special">
-                <input type="'text" placeholder="City">
-                <input type="'text" placeholder="State">
-            </div>
-            <div>
-            <input type="'text" placeholder="Flat No./Building/Street Name">
-            </div>
-            <div>
-                <input type="'text" placeholder="Area/Locality">
-            </div>
-            <div>
-                <input type="'text" placeholder="Landmark(Optional)">
-            </div>
-            <div>
-                <p>Save Address as</p>
-            </div>
-            <div>
-                <button>Home</button>
-                <button>Office</button>
-                <button>Other</button>
-            </div>
-            <div>
-                <button>Save Address</button>
-                <button>Cancel</button>
-            </div>
+    <div id="top_face">
+        <div>
+            <a href=""><img src="https://images.bewakoof.com/web/ic-desktop-normal-bwkf-logo.svg"/></a>
         </div>
-    </form>
+    </div>
+    <div id="nparent">
+        <div id="mparent">
+            <h1>Add New Address</h1>
+            <form>
+                <div id="parent">
+                    <div>
+                        <input id="Country" type="'text" placeholder="Country" value="" maxlength="15">
+                    </div>
+                    <div>
+                        <input id="Name" type="'text" placeholder="Full Name" maxlength="15">
+                    </div>
+                    <div>
+                        <input id="Mobile" type="number" placeholder="Mobile Number">
+                    </div>
+                    <div>
+                        <input id="Zipcode" type="number" placeholder="Pin Code/Postal Code/Zipcode">
+                    </div>
+                    <div id="special">
+                        <input id="City" type="'text" placeholder="City" maxlength="15">
+                        <input id="State" type="'text" placeholder="State" maxlength="15">
+                    </div>
+                    <div>
+                    <input id="Flat" type="'text" placeholder="Flat No./Building/Street Name" maxlength="15">
+                    </div>
+                    <div>
+                        <input id="Area" type="'text" placeholder="Area/Locality" maxlength="40">
+                    </div>
+                    <div>
+                        <input id="Landmark" type="'text" placeholder="Landmark(Optional)" maxlength="30" value="">
+                    </div>
+                    <!-- <div style="margin-top:-5px;justify-content:left">
+                        <p style="color:grey">Save Address as</p>
+                    </div>
+                    <div id="typeA" style="margin-top:-35px;justify-content:left">
+                        <button>Home</button>
+                        <button>Office</button>
+                        <button>Other</button>
+                    </div> -->
+                    <div id="submit">
+                        <button onclick="Save()">Save Address</button>
+                        <button onclick='Cancel()'>Cancel</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div id="Saved_Address">
+            <!-- <h1>Choose From Existing ones</h1>
+            <div>
+                <div>
+                    <div>Arsh Goyal</div>
+                    <div>Home</div>
+                </div>
+                <div>Adress</div>
+                <div>
+                    Mobile:
+                </div>
+                <div>
+                    <button>Confirm</button>
+                    <button>Remove</button>
+                </div>
+            </div> -->
+            <!-- Append Here -->
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+    var address=JSON.parse(localStorage.getItem("address")) || [];
+    display(address);
+
+function display(address)
+{
+    document.querySelector("#Saved_Address").innerHTML="<h1>Choose From Existing ones</h1>";
+    address.map(function(e,i){
+        var div1=document.createElement("div");
+        var div2=document.createElement("div");
+        var div3=document.createElement("div");
+        div3.textContent=e.Name;
+
+        div2.append(div3);
+
+        var div4=document.createElement("div");
+        div4.textContent=e.Flat+","+e.Area+","+e.Landmark+","+e.City+","+e.State+","+e.Country+","+e.Zipcode;
+
+        var div5=document.createElement("div");
+        div5.textContent=e.Mobile;
+
+        var div6=document.createElement("div");
+        var btn1=document.createElement("button");
+        btn1.textContent="Confirm";
+        btn1.addEventListener("click",function(){
+            event.preventDefault();
+            red(e,i);
+        })
+
+        var btn2=document.createElement("button");
+        btn2.textContent="Remove";
+        btn2.addEventListener("click",function(){
+            remove(e,i);
+        });
+
+        div6.append(btn1,btn2);
+        div1.append(div2,div4,div5,div6);
+        document.querySelector("#Saved_Address").append(div1);
+    })
+
+}
+function red(){
+    window.location.href="paymentmethod.html"
+}
+function remove(e,i){
+    address=address.filter(function(elem,ind){
+        if(e!=elem){
+            return true;
+        }
+    })
+
+    localStorage.setItem("address",JSON.stringify(address));
+    display(address);
+}
+
+    function Save(){
+        event.preventDefault()
+        var o={
+            
+            Country:document.querySelector("#Country").value,
+            Name:document.querySelector("#Name").value,
+            Zipcode:document.querySelector("#Zipcode").value,
+            Mobile:document.querySelector("#Mobile").value,
+            City:document.querySelector("#City").value,
+            State:document.querySelector("#State").value,
+            Flat:document.querySelector("#Flat").value,
+            Area:document.querySelector("#Area").value,
+            Landmark:document.querySelector("#Landmark").value,
+        }
+        if(o.Country==""){
+            document.querySelector("#Country").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Country").style.borderColor="Grey";
+        }
+        if(o.Name==""){
+            document.querySelector("Name").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Name").style.borderColor="Grey";
+        }
+        if(o.Zipcode==""){
+            document.querySelector("#Zipcode").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Zipcode").style.borderColor="Grey";
+        }
+        if(o.Mobile==""){
+            document.querySelector("#Mobile").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Mobile").style.borderColor="Grey";
+        }
+        if(o.City==""){
+            document.querySelector("#City").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#City").style.borderColor="Grey";
+        }
+        if(o.Flat==""){
+            document.querySelector("#Flat").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Flat").style.borderColor="Grey";
+        }
+        if(o.State==""){
+            document.querySelector("#State").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#State").style.borderColor="Grey";
+        }
+        if(o.Area==""){
+            document.querySelector("#Area").style.borderColor="Red";
+        }
+        else{
+            document.querySelector("#Area").style.borderColor="Grey";
+        }
+        if((o.Country!="" && o.Name!="" && o.Zipcode!="" && o.Mobile!="" && o.City!="" && o.Flat!="" && o.State!="" && o.Area!="")){
+            address.push(o);
+            localStorage.setItem("address",JSON.stringify(address));
+            display(address);   
+        }
+        else{
+            alert("Fill all required data")
+        }
+    }
+    function Cancel(){
+        event.preventDefault();
+        window.location.href = "cart2.html";
+    }
+    
+
+
+
+</script>

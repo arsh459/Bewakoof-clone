@@ -9,15 +9,15 @@ function display(list) {
             });
     
             var image = document.createElement("img");
-            image.setAttribute("src", elem.img_url);
+            image.setAttribute("src", elem.img);
             image.setAttribute("alt", elem.id);
 
             title = document.createElement("p");
-            title.textContent = elem.title;
+            title.textContent = elem.Brand;
             title.setAttribute("id","brandTitle")
 
             var desc = document.createElement("p");
-            desc.textContent = elem.desc;
+            desc.textContent = elem.Desc;
             desc.setAttribute("id","description")
 
             var priceBox = document.createElement("div");
@@ -27,7 +27,7 @@ function display(list) {
             price.textContent = "₹" + elem.price;
 
             var mrp = document.createElement("p");
-            mrp.textContent = "₹" + elem.strikedOffPrice;
+            mrp.textContent = "₹" + elem.cprice;
 
             var box = document.createElement("div");
             box.setAttribute("id","box_of_rating_and_price");
@@ -56,11 +56,28 @@ function display(list) {
         // console.log(data);
     }
 
-    var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    function addToCart(item) {
-        cartItems.push(item);
-        localStorage.setItem("cart",JSON.stringify(cartItems));
+    // var cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    // function addToCart(item) {
+    //     cartItems.push(item);
+    //     localStorage.setItem("cart",JSON.stringify(cartItems));
+    // }
+    var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    function addToCart(e,i){
+    var result=cart.filter(function(elem,index){
+        if(e.identity==elem.identity){
+            alert("Item Aleady in Cart");
+            return true;
+        }
+    })
+    if(result.length==0){
+        e.quantity=1;
+        e.fcprice=e.quantity*e.cprice;
+        e.ftprice=e.quantity*e.tprice;
+        e.fprice=e.quantity*e.price;
+        cart.push(e);
+        localStorage.setItem("cart",JSON.stringify(cart));
     }
+   }
 
     
     function search() {
