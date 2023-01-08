@@ -218,6 +218,7 @@ width: 15%;
 margin-top:-10px;
 font-size: 14px;
 color:grey;
+margin-right: 10px;
 }
 
 #priceBox {
@@ -225,7 +226,6 @@ color:grey;
    justify-content: left;
    width: 20%;
    height: 30px;
-   font-size: 20px;
    align-items: center;
 }
 
