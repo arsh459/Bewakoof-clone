@@ -396,7 +396,7 @@ var cart=JSON.parse(localStorage.getItem("cart")) || [];
 function addToCart(e,i){
     var result=cart.filter(function(elem,index){
         if(e.identity==elem.identity){
-            alert("Item Aleady in Cart");
+            alert("Item Already in Cart");
             return true;
         }
     })

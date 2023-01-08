@@ -8,6 +8,11 @@ var cart=JSON.parse(localStorage.getItem("cart")) || [];
             document.querySelector("#Cartlink").href="cart2.html"
         }
     }
+    var quan=0;
+    cart.map(function(e,i){
+        quan+=Number(e.quantity);
+    })
+    document.querySelector("#Sup").textContent=quan;
     var store=JSON.parse(localStorage.getItem("store")) || [];
     if(store.length==0)
     {
@@ -88,6 +93,7 @@ function display(list) {
     function addToCart(e,i){
     var result=cart.filter(function(elem,index){
         if(e.identity==elem.identity){
+            alert("Item Already in Cart");
             return true;
         }
         else{
