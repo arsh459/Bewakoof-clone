@@ -12,16 +12,13 @@ function display(list) {
     
             var image = document.createElement("img");
             image.setAttribute("src", elem.img);
-            image.setAttribute("src", elem.img);
             image.setAttribute("alt", elem.id);
 
             title = document.createElement("p");
             title.textContent = elem.Brand;
-            title.textContent = elem.Brand;
             title.setAttribute("id","brandTitle")
 
             var desc = document.createElement("p");
-            desc.textContent = elem.Desc;
             desc.textContent = elem.Desc;
             desc.setAttribute("id","description")
 
