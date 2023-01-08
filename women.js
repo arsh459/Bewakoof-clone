@@ -1,3 +1,20 @@
+var cart=JSON.parse(localStorage.getItem("cart")) || [];
+    function checkcart(){
+        if(cart.length==0){
+            document.querySelector("#Cartlink").href="cart.html"
+        }
+        else{
+            document.querySelector("#Cartlink").href="cart2.html"
+        }
+    }
+    var store=JSON.parse(localStorage.getItem("store")) || [];
+    if(store.length==0)
+    {
+        document.querySelector("#loginname").textContent="Login";
+    }
+    else{
+        document.querySelector("#loginname").textContent=store[store.length-1].name;
+    }
 var data=[
     {
         Brand:"Bewakoof",
@@ -7,7 +24,8 @@ var data=[
         cprice:1699,
         tprice:539,
         rating:4,
-        size:"XS"
+        size:"XS",
+        identity:"R1"
     },
     {
         Brand:"Bewakoof",
@@ -17,7 +35,8 @@ var data=[
         cprice:1299,
         tprice:509,
         rating:4,
-        size:"XS"
+        size:"XS",
+        identity:"R2"
     },
     {
         Brand:"Bewakoof",
@@ -27,7 +46,8 @@ var data=[
         cprice:1799,
         tprice:339,
         rating:3,
-        size:"XS"
+        size:"XS",
+        identity:"R3"
     },
     
     {
@@ -38,7 +58,8 @@ var data=[
         cprice:999,
         tprice:599,
         rating:4,
-        size:"XS"
+        size:"XS",
+        identity:"R4"
     },
     {
         Brand:"Aks",
@@ -48,7 +69,8 @@ var data=[
         cprice:1099,
         tprice:599,
         rating:5,
-        size:"S"
+        size:"S",
+        identity:"R5",
     },
     {
         Brand:"Aks",
@@ -58,7 +80,8 @@ var data=[
         cprice:999,
         tprice:399,
         rating:4,
-        size:"S"
+        size:"S",
+        identity:"R6"
     },
     
     {
@@ -69,7 +92,8 @@ var data=[
         cprice:999,
         tprice:599,
         rating:3,
-        size:"S"
+        size:"S",
+        identity:"R7"
     },
     {
         Brand:"Aks",
@@ -79,7 +103,8 @@ var data=[
         cprice:4499,
         tprice:999,
         rating:4,
-        size:"S"
+        size:"S",
+        identity:"R8"
     },
     {
         Brand:"Kotty",
@@ -89,7 +114,8 @@ var data=[
         cprice:3499,
         tprice:799,
         rating:5,
-        size:"M"
+        size:"M",
+        identity:"R9"
     },
     {
         Brand:"Kotty",
@@ -99,7 +125,8 @@ var data=[
         cprice:3499,
         tprice:799,
         rating:5,
-        size:"M"
+        size:"M",
+        identity:"R10"
     },
     {
         Brand:"Kotty",
@@ -109,7 +136,9 @@ var data=[
         cprice:1799,
         tprice:499,
         rating:4,
-        size:"M"
+        size:"M",
+        identity:"R11"
+
     },
     {
         Brand:"Kotty",
@@ -119,7 +148,8 @@ var data=[
         cprice:1499,
         tprice:349,
         rating:5,
-        size:"M"
+        size:"M",
+        identity:"R12"
     },
     {
         Brand:"Rigo",
@@ -129,7 +159,8 @@ var data=[
         cprice:1899,
         tprice:219,
         rating:4,
-        size:"M"
+        size:"M",
+        identity:"R13"
     },
     {
         Brand:"Rigo",
@@ -139,7 +170,8 @@ var data=[
         cprice:1899,
         tprice:219,
         rating:3,
-        size:"M"
+        size:"M",
+        identity:"R14"
     },
     {
         Brand:"Rigo",
@@ -149,7 +181,8 @@ var data=[
         cprice:2499,
         tprice:579,
         rating:4,
-        size:"M"
+        size:"M",
+        identity:"R15"
     },
     {
         Brand:"Rigo",
@@ -159,7 +192,8 @@ var data=[
         cprice:1899,
         tprice:479,
         rating:3,
-        size:"M"
+        size:"M",
+        identity:"R16"
     },
     {
         Brand:"Rigo",
@@ -169,7 +203,8 @@ var data=[
         cprice:1699,
         tprice:679,
         rating:4,
-        size:"M"
+        size:"M",
+        identity:"R17"
     },
     {
         Brand:"Freakins",
@@ -179,7 +214,8 @@ var data=[
         cprice:1599,
         tprice:509,
         rating:4,
-        size:"L"
+        size:"L",
+        identity:"R18"
     },
     {
         Brand:"Freakins",
@@ -189,7 +225,8 @@ var data=[
         cprice:1699,
         tprice:309,
         rating:3,
-        size:"L"
+        size:"L",
+        identity:"R19"
     },
     {
         Brand:"Door",
@@ -199,7 +236,8 @@ var data=[
         cprice:1699,
         tprice:309,
         rating:3,
-        size:"L"
+        size:"L",
+        identity:"R20"
     },
     {
         Brand:"Door ",
@@ -209,7 +247,8 @@ var data=[
         cprice:1499,
         tprice:569,
         rating:4,
-        size:"XL"
+        size:"XL",
+        identity:"R21"
     },
     {
         Brand:"Door ",
@@ -219,7 +258,8 @@ var data=[
         cprice:1199,
         tprice:469,
         rating:3,
-        size:"XL"
+        size:"XL",
+        identity:"R22"
     },
     {
         Brand:"Door ",
@@ -229,7 +269,8 @@ var data=[
         cprice:1499,
         tprice:369,
         rating:4,
-        size:"XL"
+        size:"XL",
+        identity:"R23"
     },
     ];
     for(var i=0;i<data.length;i++){
