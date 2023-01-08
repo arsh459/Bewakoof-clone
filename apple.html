@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="mobilepages.css">
     <title>Apple Covers And Cases</title>
 </head>
-
 <body>
     
     <!-- From here navbar section is starting -->
@@ -54,11 +53,9 @@
                 </div>
                     <ul class="ulist">
                         <li class="listlogo">|</li>
-                        <li class="list"><a class="productpage" href="login.html">Login</a></li>
+                        <li class="list"><a id="loginname" class="productpage" href="login.html">Login</a></li>
                         <li class="list"><a class="productpage" href=""><i class="fa-regular fa-heart"></a></i></li>
-                        
-                        <li class="list"><a class="productpage" href=""><i class="fa-solid fa-bag-shopping"></a></i></li>
-                        
+                        <li class="list"><a class="productpage" id="Cartlink" href="" onclick="checkcart()"><i class="fa-solid fa-bag-shopping"><sup id="Sup" style="color:red">0</sup></i></a></li>
                     </ul>
                 </div>
             </header>
@@ -74,7 +71,7 @@
         <!-- Till here it is navbar section-->
     
         <div id="headingBox">
-            <div><h1>Xiaomi Covers And Cases</h1></div>
+            <div><h1>Apple Covers And Cases</h1></div>
             <div>
                 <input id="searchForItem" type="text" placeholder="Search Here For Your Phone">
                 <button id="searchingForcover" onclick="search()"> <i class="fa-sharp fa-solid fa-magnifying-glass"></i> </button>
@@ -195,9 +192,9 @@
 
 var data = [
     { img : "https://images.bewakoof.com/t640/chrome-mickey-premium-glass-cover-for-apple-iphone-14-plus-553019-1667982586-1.jpg",
-    title : "APPLE back cover for iphone 12 Mini",
+    Brand : "APPLE back cover for iphone 12 Mini",
     price : 2199,
-    strikedOffPrice : 2599,
+    cprice : 2599,
     tprice: 1999,
     rating: 4.7,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 Mini ",
@@ -205,9 +202,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/hod-dragon-premium-glass-cover-for-apple-iphone-14-plus-552989-1667982811-1.jpg",
-    title : "APPLE back cover for iphone 14 pro max",
+    Brand : "APPLE back cover for iphone 14 pro max",
     price : 2099,
-    strikedOffPrice : 2599,
+    cprice : 2599,
     tprice: 1999,
     rating: 4.7,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max ",
@@ -215,9 +212,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/virgo-zodiac-premium-glass-cover-for-apple-iphone-14-plus-552963-1667982510-1.jpg",
-    title : "APPLE back cover for iphone 13 pro max",
+    Brand : "APPLE back cover for iphone 13 pro max",
     price : 4199,
-    strikedOffPrice : 5599,
+    cprice : 5599,
     tprice: 3899,
     rating: 4.4,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 13 pro max ",
@@ -225,9 +222,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/minion-peace-premium-glass-cover-for-apple-iphone-14-plus-552965-1667982372-1.jpg",
-    title : "APPLE back cover for iphone 11 pro max",
+    Brand : "APPLE back cover for iphone 11 pro max",
     price : 3199,
-    strikedOffPrice : 3599,
+    cprice : 3599,
     tprice: 2999,
     rating: 4.7,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 11 pro max ",
@@ -235,9 +232,9 @@ var data = [
     },
     {
     img : "https://images.bewakoof.com/t640/knight-batman-premium-glass-cover-for-apple-iphone-14-plus-552983-1667982217-1.jpg",
-    title : "APPLE back cover for iphone 14 pro max",
+    Brand : "APPLE back cover for iphone 14 pro max",
     price : 3499,
-    strikedOffPrice : 3899,
+    cprice : 3899,
     tprice: 3299,
     rating: 4.5,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max",
@@ -245,9 +242,9 @@ var data = [
     },
     {
     img : "https://images.bewakoof.com/t640/akatsuki-ninjas-premium-glass-cover-for-apple-iphone-14-plus-553002-1667982116-1.jpg",
-    title : "APPLE back cover for iphone 12 Mini",
+    Brand : "APPLE back cover for iphone 12 Mini",
     price : 2499,
-    strikedOffPrice : 2999,
+    cprice : 2999,
     tprice: 2299,
     rating: 4.3,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 Mini",
@@ -255,9 +252,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/joker-dance-premium-glass-cover-for-apple-iphone-14-plus-552990-1667982319-1.jpg",
-    title : "APPLE back cover for iphone 11 Mini",
+    Brand : "APPLE back cover for iphone 11 Mini",
     price : 4199,
-    strikedOffPrice : 5099,
+    cprice : 5099,
     tprice: 3999,
     rating: 4.6,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 11 Mini",
@@ -265,9 +262,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/team-kakashi-premium-glass-cover-for-apple-iphone-14-plus-553001-1667981998-1.jpg",
-    title : "APPLE back cover for iphone 14 pro max",
+    Brand : "APPLE back cover for iphone 14 pro max",
     price : 4499,
-    strikedOffPrice : 5099,
+    cprice : 5099,
     tprice: 4199,
     rating: 4.2,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 14 pro max",
@@ -275,9 +272,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/itachi-manga-premium-glass-cover-for-apple-iphone-14-plus-552987-1667982377-1.jpg",
-    title : "APPLE back cover for iphone 13 Mini",
+    Brand : "APPLE back cover for iphone 13 Mini",
     price : 2499,
-    strikedOffPrice : 2799,
+    cprice : 2799,
     tprice: 2299,
     rating: 3.7,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 13 Mini",
@@ -285,9 +282,9 @@ var data = [
     },
     {
      img : "https://images.bewakoof.com/t640/lost-in-music-green-premium-glass-cover-for-apple-iphone-14-plus-552961-1667982645-1.jpg",
-    title : "APPLE back cover for iphone 12 pro max",
+    Brand : "APPLE back cover for iphone 12 pro max",
     price : 3399,
-    strikedOffPrice : 3599,
+    cprice : 3599,
     tprice: 3199,
     rating: 3.9,
     Desc:"Life Typography Premium Glass Cover For APPLE back cover for iphone 12 pro max",
@@ -295,10 +292,8 @@ var data = [
     }
     ];
 
-   
 </script>
 
 <script  src="mobilepages.js"></script>
-
 
 </html>
