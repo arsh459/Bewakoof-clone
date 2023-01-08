@@ -7,143 +7,35 @@
     <title>Document</title>
     <Style>
         #main{
-           width:85%;
+           width:80%;
            height:95vh;
            display: grid;
-           
-           margin-left: 7%;
-           margin-right: 7%;
-           grid-template-columns: 58% 40%;
+           border:  2px solid yellow;
+           margin-left: 10%;
+           margin-bottom: 10%;
+           grid-template-columns: 60% 40%;
            gap: 20px;
         
         }
         h3{
             margin:2% 0 2% 10%;
         }
-        .leftmargin{
-         margin: 1% 0 1% 5%;
-         
+        #main>div{
+            background-color: blue;
         }
         #heading{
              display: flex;
-            background-color: rgba(226, 216, 205, 0.192);
+            background-color: rgb(245, 228, 208);
              
         }
-        #save{
-        background-color: #fdd835;
+        #right>div+p{
+        background-color: yellow;
         border-radius: 5px;
-        padding:5px;
-        
+        border: 2px solid red;
+        padding:20px;
+        margin-top: -5px;
         }
-        .firstpurchage{
-            
-            border-radius: 5px;
-            padding: 5px;
-            margin-top: 15px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-        #coupon>p{
-            border-radius: 5px;
-            padding: 10px;
-            background-color:#42a2a23a ;
-            margin: 2px;
-            
-        }
-        #coupon{
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            border: 1px solid rgba(0, 0, 0, 0.418);
-            background: transparent;
-        }
-        #summary{
-            background-color: rgba(179, 184, 184, 0.486);
-            border: 1px solid rgba(41, 39, 39, 0.753);
-            
-        }
-        #summary>h4{
-            margin-left: 10px;
-            font-weight: 600;
-        }
-        #price{
-            display: flex;
-            justify-content: space-between;
-        }
-        #price>div{
-        margin: 5px 30px 5px 30px;
-        }
-        #youhave{
-            background-color: rgba(147, 151, 151, 0.438);
-            border-radius: 20px;
-            margin-left: 30px;
-            margin-right: 30px;padding: 5px;
-            color: green;
-        }
-        #totalprice{
-            border: 1px solid rgba(19, 17, 17, 0.603);
-            border-radius: 2px;
-        }
-        #total{
-            display: flex;
-            border: 2px solid gray;
-            justify-content: space-between;
-        
-        }#total>div{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        button{
-            width:260px;
-            margin: 5px;
-            height: 45px;
-            border-radius: 10px;
-            background-color: rgba(30, 143, 255, 0.651);
-            color: white;
-            font-weight: 600;
-            font-size: medium;
-        }
-        
-        .value{
-            display: flex;
-            border: 1px solid rgba(17, 12, 12, 0.055);
-            width: 70px;
-            margin:2% 5% 2% 5%;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        #quan{
-            display: flex;
-        }
-        #cartitems{
-        
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-            display: flex;
-            justify-content: space-between;
-            
-        }
-        #remove{
-            display: grid;
-            grid-template-columns: 30% 70%;
-            
-            height: 45px;
-            justify-content: space-between;
-        }
-        #remove>div{
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-            text-align: center;
-            justify-content: center;
-            align-content: center;
-            padding: 10px;
-        }
-        #img{
-            border: 1px solid rgba(0, 0, 0, 0.062);
-            width: 100px;
-            height:120px;
-            margin: 10px;
-        }
-        #hurry{
-            color: red;
-            margin:1% 1% 1% 5%;
-        }
-        
+
     </Style>
 </head>
 <body>
@@ -160,114 +52,19 @@
                         <div><p style="margin-left:-150px;">Yay! You get FREE delivery on this order</p></div>
                     </div>
                     <div>
-                        <div id="cartitems"> 
-                            <div id="incartitems">
-                                <div class="leftmargin">
-                                    Men's Black Kyuubi Mode Graphic Printed Oversized T-Shirt
-                                </div>
-                                <div class="leftmargin">
-                                    ₹000
-                                </div>
-                                <div class="leftmargin" style="color: green;">You saved 900 </div>
-                                <div id="quan"> 
-                                    <div class="value">
-                                        <div>Size:</div>
-                                        <select>
-                                          <option value="">size</option>
-                                          <option value="">S</option>
-                                          <option value="">M</option>
-                                          <option value="">L</option>
-                                          <option value="s">XL</option>
-                                          <option value="">XXL</option>
 
-                                        </select>
-                                    </div>
-                                    
-                                    <div class="value">
-                                        <div>Qty:</div>
-                                        <select>
-                                          <option value="">1</option>
-                                          <option value="s">2</option>
-                                          <option value="">3</option>
-                                          <option value="">4</option>
-                                          <option value="s">5</option>
-                                          <option value="">6</option>
-                                          <option value="">7</option>
-                                          <option value="s">8</option>
-                                          <option value="">9</option>
-                                          <option value="">10</option>
-                                          
-                                        </select>
-                                    </div> 
-                                   
-                                </div>
-                                <div id="hurry">Hurry! Only 15 left!</div>
-                            </div>
-                            <div id="img"> img</div>
-                           
-                        </div>
-                        <div id="remove">
-                            <div>Remove</div>
-                            <div>Move To Wishlist</div>
-                        </div>
+                        cart item
                     </div>
               </div>
               <div>
                <div id="right">
-                 <div id="save">
-                    <p > Save Extra ₹60 with tri</p>
+                 <div>
+                    <p> Save Extra ₹60 with tri</p>
                    
                      
                  </div>
-                 <div class="firstpurchage">
-                    <p>Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200</p>
-                 </div>
                  <div>
-                    <p class="firstpurchage">Whistles! Get extra 20% Cashback on prepaid orders above Rs.499.
-                         Coupon code - NEW20. Applicable for new customers only!</p>
-                 </div>
-                 <div id="totalprice">
-                    <div id="coupon">
-                      <p>Have a Coupon / Referral / Gift Card ?</p>
-                    </div>
-                    <div id="pricesum">
-                        <div>
-                            <div id="summary">
-                               <h4>Price Summary</h4> 
-                            </div>
-                            <div>
-                                <div id="price">
-                                   <div>Total MRP (Incl. of taxes) </div>
-                                   <div>₹000</div> 
-                                </div>
-                                <div id="price">
-                                    <div>Shipping Charges 
-
-                                    </div>
-                                    <div>Free</div> 
-                                 </div>
-                                 <div id="price">
-                                    <div>Bag Discount </div>
-                                    <div>₹000</div> 
-                                 </div>
-                                 <div id="price">
-                                    <div> Subtotal</div>
-                                    <div>₹000</div> 
-                                 </div>
-                                 <div ><p id="youhave">You Have Save ₹</p></div>
-                                 <div id="total">
-                                    <div>
-                                        <h3>Total</h3>
-                                        <h3>₹</h3>
-                                    </div>
-                                    <div><button>ADD ADRESS</button></div> 
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-
-                    </div>
+                    <p>Get Rs.200 instant discount on your First Purchase above Rs.999. Coupon code -NEW200</p>
                  </div>
                </div>
             </div>
@@ -276,4 +73,3 @@
      </div>
 </body>
 </html>
-<script src="./cart2.js"></script>

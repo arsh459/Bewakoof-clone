@@ -10,11 +10,8 @@
             display: grid; 
             width: 100%;
             height: 97vh;
-            grid-template-columns:50% 40% 10%;
-        
-            
+            grid-template-columns:50% 40% 10%;  
         }
-        
         #first,#third{
             background-color: bisque;
             width: 100%;
@@ -36,7 +33,6 @@
             height: 95%;
             width: 100%;
         }
-        
         form{
             margin: 0;
             padding: 0;
@@ -51,9 +47,6 @@
             align-items: center;
             justify-content: center;
             align-content: center;
-        
-            
-        
         }
         input{
             display: block;
@@ -143,7 +136,7 @@
      localStorage.setItem("store",JSON.stringify(dataArray));
      var st=JSON.parse(localStorage.getItem("store"));
      console.log(st);
-     window.location.href="men.html";
+     window.location.href="index.html";
      document.getElementById("name").value="";
      document.getElementById("email").value="";
      document.getElementById("pass").value="";
