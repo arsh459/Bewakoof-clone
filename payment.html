@@ -5,14 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Address</title>
+    <style>
+        #parent{
+            border: 1px solid red;
+            display: block;
+            padding:auto;
+            width:50%;
+            margin: auto;
+        }
+        #parent>div{
+            width:90%;
+            height:60px;
+            margin:auto;
+            margin-top:15px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding:2px;
+        }
+        #parent>div>input{
+            width:99%;
+            height:48px;
+            border:none;
+            border-radius: 5px;
+            border:1px solid grey;
+            font-size: 16px;
+            padding-left:10px;
+        }
+        #special{
+            display:flex;
+            justify-content:space-between;
+            width:70%s
+        }
+        #special>input{
+            width:25%;
+        }
+        
+
+    </style>
 </head>
 <body>
     <form>
-        <input type="'text" placeholder="Enter Zip Code">
-        <input type="'text" placeholder="Enter Address">
-        <input type="'text" placeholder="Enter City/Town">
-        <input type="'text" placeholder="Enter City/Town">
-        <input type="submit">
+        <div id="parent">
+            <div>
+                <input type="'text" placeholder="Country">
+            </div>
+            <div>
+                <input type="'text" placeholder="Full Name">
+            </div>
+            <div>
+                <input type="'Number" placeholder="Mobile Number">
+            </div>
+            <div>
+                <input type="'text" placeholder="Pin Code/Postal Code/Zipcode">
+            </div>
+            <div id="special">
+                <input type="'text" placeholder="City">
+                <input type="'text" placeholder="State">
+            </div>
+            <div>
+            <input type="'text" placeholder="Flat No./Building/Street Name">
+            </div>
+            <div>
+                <input type="'text" placeholder="Area/Locality">
+            </div>
+            <div>
+                <input type="'text" placeholder="Landmark(Optional)">
+            </div>
+            <div>
+                <p>Save Address as</p>
+            </div>
+            <div>
+                <button>Home</button>
+                <button>Office</button>
+                <button>Other</button>
+            </div>
+            <div>
+                <button>Save Address</button>
+                <button>Cancel</button>
+            </div>
+        </div>
     </form>
 </body>
 </html>
