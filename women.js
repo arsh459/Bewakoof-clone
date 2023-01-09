@@ -382,8 +382,8 @@ function sortByPrice(){
     {
         data.sort(function(a,b)
         {
-            if(a.price>b.price) return 1;
-            if(a.price<b.price) return -1;
+            if(a.price>b.price) return -1;
+            if(a.price<b.price) return 1;
             return 0
         })
         display(data);
@@ -392,8 +392,8 @@ function sortByPrice(){
     {
         data.sort(function(a,b)
         {
-            if(a.price>b.price) return -1;
-            if(a.price<b.price) return 1;
+            if(a.price>b.price) return 1;
+            if(a.price<b.price) return -1;
             return 0
         })
         display(data);
